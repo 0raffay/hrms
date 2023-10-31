@@ -64,13 +64,13 @@
                             </div>
 
                             <div class="cus-inputs mb-15">
-                                <label for="email" class="floating-label">Email Address</label>
+                                <label for="email" class="floating-label fs-16 fw-400">Email Address</label>
                                 <input type="email" name="email" id="email">
                                 <span class="inputFocusLine"></span>
                             </div>
 
                             <div class="cus-inputs mb-15">
-                                <label for="password" class="floating-label">Password</label>
+                                <label for="password" class="floating-label fs-16 fw-400">Password</label>
                                 <input type="password" name="password" id="password">
 
                                 <div class="showPassButton">
