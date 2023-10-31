@@ -1,17 +1,25 @@
+
+@font-face {
+    font-family: Axiforma, sans-serif;
+    src: url(../fonts/AxiformaRegular.otf);
+}
+
 :root {
-    --ff-primary: 'Plus Jakarta Sans', sans-serif;
+    --ff-primary: Axiforma, sans-serif;
     --ff-secondary: 'Ariel', sans-serif;
 
     --clr-primary: #114084;
     --clr-primary-300: #3466AA;
 
-    --fc-neutral-700: #1C1C1C;
+    --fc-neutral-700: #292D34;
     --fc-neutral-400: #856363;
 
     --fc-accent: #FFF;
     
     --section-padding: 65px 0;
 
+    --fs-12: 12px;
+    --fs-13: 13px;
     --fs-14: 14px;
     --fs-16: 16px;
     --fs-18: 18px;

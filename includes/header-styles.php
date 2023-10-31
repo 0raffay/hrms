@@ -6,8 +6,8 @@ $sitePhone="";
 // OG DATA:
 $siteName = "HRMS";
 $siteURL = "";
-$ogContent1 = "";
-$ogContent2 = "";
+$ogContent1 = "Welcome to Our HRMS";
+$ogContent2 = "Your Gateway to Human Resources Management";
 $ogImgPath =  "/assets/images/og.png";
 ?>
 

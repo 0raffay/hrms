@@ -134,7 +134,7 @@ label {
     margin: 0 2px;
 
     padding: 0;
-    
+
     transition: width 250ms cubic-bezier(0.165, 0.84, 0.44, 1);
     transform-origin: center;
 }
@@ -505,6 +505,10 @@ label {
 
 /* FONT COLORS START */
 
+.fc-blue-300 {
+    color: #4E9CEF;
+}
+
 .fc-white {
     color: #FFF;
 }
@@ -523,6 +527,10 @@ label {
 
 .fc-secondary-400 {
     color: var(--clr-secondary-400);
+}
+
+.fc-neutral-700 {
+    color: var(--fc-neutral-700);
 }
 
 /* FONT COLORS END */
@@ -559,7 +567,38 @@ label {
 
 /* FONT WEIGHTS END */
 
+/* LINE HEIGHT START */
+.lh-1 {
+    line-height: 1;
+}
+
+.lh-1-1 {
+    line-height: 1.1;
+}
+
+.lh-1-2 {
+    line-height: 1.2;
+}
+
+.lh-1-3 {
+    line-height: 1.3;
+}
+
+.lh-1-4 {
+    line-height: 1.4;
+}
+
+.lh-1-5 {
+    line-height: 1.5;
+}
+
+/* LINE HEIGHT END */
+
 /* FONT SIZES START */
+
+.fs-12 {
+    font-size: var(--fs-12);
+}
 
 .fs-13 {
     font-size: var(--fs-13);
@@ -626,6 +665,119 @@ label {
 }
 
 /* FONT SIZES END */
-
-
 /**--- UTLITIY CLASSES END ---*/
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/**--- SCREEN 1 START ---*/
+#introMain {
+    --bg-size: 150%;
+    background: linear-gradient(65deg, #9ECCF6, #F5A571, #CD8CED, #F273C0);
+    background-size: var(--bg-size) var(--bg-size);
+    animation: gradient 15s ease infinite;
+
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.introHeadingContainer {
+    max-width: 761px;
+    width: 100%;
+    margin-inline: auto;
+}
+
+.introHeading {
+    font-size: 120px;
+    line-height: 1.1;
+    font-weight: 900;
+    position: relative;
+}
+
+.dot {
+    width: 32px;
+    height: 32px;
+    background: #7113A0;
+    border-radius: 100%;
+    display: block;
+    position: absolute;
+    right: 15px;
+    bottom: 40px;
+}
+
+.scrollButtonWrapper {
+    position: absolute;
+    bottom: 40px;
+    cursor: pointer;
+}
+
+.introScrollDownButton {
+    width: 22px;
+    height: 39px;
+    margin: 0 auto;
+
+    position: relative;
+    background: transparent;
+}
+
+.scrollButtonStroke {
+    background: transparent;
+    border: 1px solid #FFF;
+    width: 100%;
+    height: 100%;
+    border-radius: 13px;
+}
+
+.scrollButtonDot {
+    border-radius: 100%;
+    height: 15px;
+    width: 15px;
+    background-color: #7113A0;
+
+    position: absolute;
+    bottom: 3px;
+    left: 4px;
+}
+
+/**--- SCREEN 1 END ---*/
+
+/**--- SETTING BASIC FORM START ---*/
+#main {
+    min-height: 100vh;
+    width: 100%;
+    background: #e7e7e7;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#main>* {
+    width: 100%;
+}
+
+.formMain {
+    padding-block: 33px;
+    padding-inline: 40px;
+    max-width: 454px;
+    width: 100%;
+    margin-left: auto;
+    border-radius: 10px;
+    border: 1px solid #DDDDDF;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(171, 162, 162, 0.25);
+}
+
+/**--- SETTING BASIC FORM END ---*/
