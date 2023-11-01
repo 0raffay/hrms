@@ -530,7 +530,7 @@ label {
 }
 
 .fc-neutral-700 {
-    color: var(--fc-neutral-700);
+    color: var(--clr-neutral-700);
 }
 
 /* FONT COLORS END */
@@ -686,7 +686,7 @@ label {
     --bg-size: 150%;
     background: linear-gradient(65deg, #9ECCF6, #F5A571, #CD8CED, #F273C0);
     background-size: var(--bg-size) var(--bg-size);
-    animation: gradient 15s ease infinite;
+    animation: gradient 5s ease infinite;
 
     height: 100vh;
     width: 100%;
@@ -780,14 +780,6 @@ label {
     box-shadow: 0px 4px 4px 0px rgba(171, 162, 162, 0.25);
 }
 
-.cus-inputs {
-    min-height: 60px;
-    width: 100%;
-    border-radius: 4px;
-    background: #F2F2F2;
-    position: relative;
-}
-
 .inputFocusLine {
     border-radius: 0px 0px 2.5px 2.5px;
     background: var(--clr-blue-300);
@@ -799,22 +791,59 @@ label {
     right: 0;
 }
 
+.cus-inputs {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    background: #F2F2F2;
 
-.cus-inputs input,
+    --x-controller: 20px;
+}
+
+.cus-inputs input {
+    padding-left: var(--x-controller);
+    min-height: 60px;
+    width: 100%;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
 .cus-inputs .floating-label {
+    position: absolute;
+    top: 20px;
+}
+
+.showPassButton {
+    right: var(--x-controller);
+    width: 36px;
+    height: 36px;
+    background: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.showPassButton .close {
+    display: none;
+}
+
+.showPassButton i {
+    color: var(--clr-purple-700);
 }
 
 .cus-inputs .floating-label {
     z-index: 2;
-    color: var(--fc-neutral-400);
-    left: 20px;
+    color: var(--clr-neutral-400);
+    left: var(--x-controller);
 }
 
-.cus-inputs input {
-    padding-left: 20px;
-}
 
 /**--- SETTING BASIC FORM END ---*/
