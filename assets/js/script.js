@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    
+    formInputHandler();
 });
 
 function validateForm(options, action) {
@@ -158,3 +158,50 @@ function toggler(options) {
         action.toggleClass(classToAdd);
     });
 }
+
+function formInputHandler() {
+    let inputs = $(".cus-inputs input");
+
+    function checkText(_this) {
+        let thisText = _this.val();
+        if (thisText !== "") {
+            _this.addClass("hasText");
+        } else {
+            _this.removeClass("hasText");
+        }
+    }
+
+    inputs.focus(function () {
+        checkText($(this));
+    });
+
+    inputs.blur(function () {
+        checkText($(this));
+    });
+
+    inputs.on("input", function () {
+        checkText($(this));
+    });
+
+    $(".showPassButton").click(function (e) {
+        e.preventDefault();
+        const passwordInput = $("input#password");
+        const parent = passwordInput.closest(".cus-inputs");
+        const isVisible = passwordInput.attr("type") === "text";
+
+        if (isVisible) {
+            passwordInput.attr("type", "password");
+            parent.removeClass('active');
+            $(this).removeClass("active");
+        } else {
+            passwordInput.attr("type", "text");
+            parent.addClass('active');
+            $(this).addClass("active");
+        }
+    });
+}
+
+$('#change').click(function() {
+    $('.screen-2').addClass("active");
+    $('.screen-1').removeClass("active");
+})

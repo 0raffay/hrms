@@ -1,4 +1,3 @@
-
 @font-face {
     font-family: Axiforma, sans-serif;
     src: url(../fonts/AxiformaRegular.otf);
@@ -9,16 +8,26 @@
     --ff-secondary: 'Ariel', sans-serif;
 
 
-    --clr-blue-300: #4E9CEF;
 
+    --clr-blue-300: rgba(78, 156, 239, 0.30);
+    ;
+    --clr-blue-700: #4E9CEF;
+
+    --clr-purple-300: #DCC0EB;
+    ;
     --clr-purple-700: #7113A0;
 
+    --clr-pink-300: #FDA2ED;
+    --clr-pink-700: #F53ED6;
+
+    --clr-orange-300: #F5CBB0;
+    --clr-orange-700: linear-gradient(180deg, #FF924B 0%, rgba(255, 146, 75, 0.00) 100%, #E48140 100%);
 
     --clr-neutral-700: #292D34;
     --clr-neutral-400: #878B8B;
 
     --fc-accent: #FFF;
-    
+
     --section-padding: 65px 0;
 
     --fs-12: 12px;

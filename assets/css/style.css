@@ -385,13 +385,16 @@ label {
 /**--- UTLITIY CLASSES START ---*/
 
 .btn {
-    padding: 15px 30px;
+    padding: 10px 24px;
     border-radius: 8px;
+    backdrop-filter: blur(10px);
+
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: var(--fs-16);
-    font-weight: 600;
+
+    font-size: 15px;
+    font-weight: 700;
     line-height: normal;
     transition: all 250ms ease;
 }
@@ -401,10 +404,24 @@ label {
     max-width: 100%;
 }
 
+/* 
 .btn-primary:focus,
 .btn-primary {
     color: var(--fc-accent);
     background: var(--clr-primary);
+} */
+
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.btn.fc-white:hover {
+    color: #fff;
+}
+
+.btn:hover {
+    opacity: 0.8;
 }
 
 .section__label {
@@ -487,6 +504,18 @@ label {
 
 .bg-black {
     background: #000 !important;
+}
+
+.bg-blue-700 {
+    background-color: var(--clr-blue-700);
+}
+
+.bg-purple-700 {
+    background-color: var(--clr-purple-700);
+}
+
+.bg-pink-700 {
+    background-color: var(--clr-pink-700);
 }
 
 /* BACKGROUNDS END */
@@ -757,11 +786,18 @@ label {
 #main {
     min-height: 100vh;
     width: 100%;
-    background: #e7e7e7;
+    position: relative;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+}
+
+.formContainer {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    right: 0;
+    z-index: 2;
 }
 
 #main>* {
@@ -773,22 +809,23 @@ label {
     padding-inline: 40px;
     max-width: 454px;
     width: 100%;
-    margin-left: auto;
     border-radius: 10px;
     border: 1px solid #DDDDDF;
     background: #FFF;
     box-shadow: 0px 4px 4px 0px rgba(171, 162, 162, 0.25);
 }
 
+/* inputs */
 .inputFocusLine {
     border-radius: 0px 0px 2.5px 2.5px;
-    background: var(--clr-blue-300);
+    background: var(--clr-blue-700);
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 3px;
     left: 0;
     right: 0;
+    z-index: 3;
 }
 
 .cus-inputs {
@@ -802,17 +839,21 @@ label {
 
 .cus-inputs input {
     padding-left: var(--x-controller);
-    min-height: 60px;
+    min-height: 58px;
     width: 100%;
     border-radius: 4px;
     outline: none;
     border: none;
     background: transparent;
+    font-size: 15px;
+    line-height: normal;
+    position: relative;
+    z-index: 2;
 }
 
 .cus-inputs .floating-label {
     position: absolute;
-    top: 20px;
+    top: 18px;
 }
 
 .showPassButton {
@@ -829,10 +870,16 @@ label {
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
+    z-index: 3;
 }
 
+.showPassButton.active .open,
 .showPassButton .close {
     display: none;
+}
+
+.showPassButton.active .close {
+    display: block;
 }
 
 .showPassButton i {
@@ -843,7 +890,213 @@ label {
     z-index: 2;
     color: var(--clr-neutral-400);
     left: var(--x-controller);
+
+    transition: all 100ms ease;
+}
+
+/* hover */
+input.hasText {
+    padding-top: 7px;
+}
+
+input.hasText+label.floating-label {
+    color: var(--clr-purple-700);
+    top: 3px;
+    font-size: 12px;
+}
+
+input.hasText~.inputFocusLine {
+    background: var(--clr-purple-700);
+}
+
+/* password animaiton */
+.passwordAnimation {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: var(--x-controller);
+    height: 20px;
+    width: 20px;
+    background: #FFF;
+    border-radius: 100%;
+    z-index: 1;
+    transition: all 300ms ease-in;
+}
+
+.cus-inputs.active .passwordAnimation {
+    transform: scale(50);
+}
+
+/* inputs */
+
+.rememberMe * {
+    cursor: pointer;
+}
+
+.rememberMe .form-check-input:checked {
+    border-color: #fff;
+    background-color: var(--clr-purple-700);
+}
+
+.rememberMe .form-check-input:focus {
+    border-color: none;
+    outline: 0;
+    box-shadow: none;
 }
 
 
+.form-seperator {
+    cursor: default;
+}
+
+.form-seperator .line {
+    background-color: #7C828D;
+    border: 1px solid #DDDDDF;
+    height: 1px;
+    max-width: 140px;
+    width: 100%;
+}
+
+.otherLoginButtons button {
+    padding: 10px 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 8px;
+    border: 1px solid #DDDDDF;
+    transition: all 100ms ease;
+}
+
+.otherLoginButtons button:hover {
+    background: #eeeeee;
+}
+
 /**--- SETTING BASIC FORM END ---*/
+
+/**--- SCREEN 1 START ---*/
+.screenBasic {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all 250ms ease;
+    z-index: -1;
+}
+
+.screenWrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.screenBasic.active {
+    z-index: 1;
+    opacity: 1;
+}
+
+.screen-1 {
+    background: linear-gradient(180deg, #15357A 0%, #214FB1 100%);
+}
+
+.screen-1-img .img-middle-left {
+    left: -42px;
+    top: 27%;
+}
+
+.screen-1-img .img-middle-right {
+    bottom: 28%;
+    right: 33%;
+}
+
+.screen-1-img .img-bottom-right {
+    bottom: -4%;
+    right: 42%;
+}
+
+.screen-1-img .img-bottom-left {
+    left: -70px;
+    bottom: 5%;
+}
+
+/**--- SCREEN 1 END ---*/
+
+
+/**--- SCREEN 2 START ---*/
+.screen-2 {
+    background: linear-gradient(0deg, #530B77 0%, #530B77 100%);
+}
+
+.screen-2-cards {
+    max-width: 402.474px;
+    width: 100%;
+}
+
+.screen-2-cards {
+    border-radius: 40px;
+    position: relative;
+}
+
+.card-pink {
+    background: #F53ED6;
+}
+
+.cards-back {
+    position: absolute;
+    width: 97%;
+    height: 100%;
+    inset: 0;
+    border-radius: 40px;
+    transform: rotate(-7deg) translateX(-13px) translateY(-32px);
+    z-index: -1;
+}
+
+.card-pink {
+    background-color: #F53ED6;
+}
+
+.card-pink .cards-back {
+    background-color: #FDA2ED;
+}
+
+.screen-2-cards:not(.active) {
+    display: none;
+}
+
+
+.screen-2 .form-prop {
+    left: -64px;
+    bottom: -26px;
+}
+
+.middle {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.middle-prop-right {
+    right: 60px;
+    rotate: 45deg;
+}
+
+.middle-prop-left {
+    left: 60px;
+}
+
+.top-right {
+    top: 0;
+    right: 0;
+}
+
+.form-top-prop {
+    top: -60px;
+    left: 21%;
+}
+
+.bottom-left {
+    left: 30px;
+    bottom: 30px;
+}
+
+/**--- SCREEN 2 END ---*/
