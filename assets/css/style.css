@@ -719,7 +719,9 @@ label {
 
     height: 100vh;
     width: 100%;
-    position: relative;
+    position: fixed;
+    inset: 0;
+    z-index: 4;
 }
 
 .introHeadingContainer {
@@ -1219,3 +1221,30 @@ input.hasText~.inputFocusLine {
 }
 
 /**--- SCREEN 4 / ERROR END ---*/
+
+
+/**--- ANIMATION CSS START ---*/
+
+
+.introLoader {
+    display: block;
+    opacity: 0;
+    scale: .7;
+    transform: translateY(-20px);
+}
+
+.scrollButtonWrapper {
+    opacity: 0;
+}
+
+
+.introHeadingContainer {
+    display: none;
+    opacity: 1;
+}
+
+.dot {
+    opacity: 0;
+}
+/**--- ANIMATION CSS END ---*/
+

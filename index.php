@@ -23,29 +23,28 @@
     <?php include('includes/header.php') ?>
     <!--==== HEADER END ====-->
 
-    <div id="introMain" class="d-flex align-items-center justify-content-center">
-        <div class="introLoader d-none">
-            <img src="assets/images/logos/logo.png" alt="">
-        </div>
-
-        <div class="introHeadingContainer text-center">
-            <h1 class="introHeading fc-white">
-                <span>Welcome to</span>
-                <span>Our HRMS</span>
-                <span class="dot"></span>
-            </h1>
-            <p class="introSubHeading fs-24 fw-500 fc-white">Your Gateway to Human Resources Management</p>
-        </div>
-
-        <div class="scrollButtonWrapper">
-            <div class="introScrollDownButton">
-                <div class="scrollButtonStroke">
-                </div>
-                <div class="scrollButtonDot">
-
-                </div>
+    <div class="introWrapper">
+        <div id="introMain" class=" d-flex align-items-center justify-content-center">
+            <div class="introLoader ">
+                <img src="assets/images/logos/logo.png" alt="">
             </div>
-            <p class="text-uppercase mt-2 fs-15 fw-500 fc-white">Scroll</p>
+            <div class="introHeadingContainer text-center">
+                <h1 class="introHeading fc-white">
+                    <span class="heading-1 setHeadingTranslate">Welcome to</span>
+                    <span class="heading-2 setHeadingTranslate">Our HRMS</span>
+                    <span class="dot"></span>
+                </h1>
+                <p class="introSubHeading setHeadingTranslate fs-24 fw-500 fc-white">Your Gateway to Human Resources Management</p>
+            </div>
+            <div class="scrollButtonWrapper">
+                <div class="introScrollDownButton">
+                    <div class="scrollButtonStroke">
+                    </div>
+                    <div class="scrollButtonDot">
+                    </div>
+                </div>
+                <p class="text-uppercase mt-2 fs-15 fw-500 fc-white">Scroll</p>
+            </div>
         </div>
     </div>
 
@@ -116,6 +115,7 @@
         <!-- ==== SCREEN 1 START ==== -->
         <div class="screen-1  active screenBasic">
             <div class="screenWrapper">
+                <!-- <img src="assets/images/screen-1/circles.png" class="circlesBg" alt="">? -->
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 col-sm-12">
