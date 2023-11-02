@@ -1,10 +1,157 @@
-@media only screen and (max-width: 1660px) {}
+@media only screen and (max-width: 1660px) {
 
-@media only screen and (max-width: 1360px) {}
+    .screen-1-text .screenHeading {
+        font-size: 35px;
+        line-height: 1.3;
+    }
 
-@media only screen and (max-width: 1240px) {}
+    .screen-2 .middle-prop-right {
+        bottom: 40px;
+    }
 
-@media only screen and (max-width: 992px) {}
+    .screen-2 .middle-prop-left {
+        top: 40px;
+    }
+
+    .screen-3 .top-right {
+        top: -20px;
+        right: -20px;
+        scale: .7;
+    }
+
+    .screen-3 .top-middle-prop {
+        scale: 0.4;
+        top: -99px;
+    }
+
+    .screen-3 .rocketImage {
+        left: -60px;
+        top: -89px;
+    }
+
+    .error-text h3 {
+        font-size: 50px;
+        letter-spacing: 10px;
+    }
+
+    .screen-4-text  .screenSubHeading {
+        font-size: 22px;
+    }
+}
+
+@media only screen and (max-width: 1360px) {
+    .screenHeading {
+        font-size: 35px;
+        line-height: 1.3;
+    }
+
+    .screenSubHeading {
+        font-size: 20px;
+        line-height: 1.3;
+    }
+
+    .screen-1-img .img-bottom-right {
+        right: 108px;
+    }
+
+    .screen-1-img .img-middle-right {
+        right: 100px;
+    }
+
+    .screen-2 .form-prop {
+        left: -8px;
+        bottom: -50px;
+    }
+
+    .screen-2-cards h5 {
+        font-size: 28px;
+        line-height: 1.3;
+    }
+
+    .screen-3 .form-top-left {
+        left: -11px;
+        top: -35px;
+        scale: .7;
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+    .screen-4-text  {
+        padding-left: 20px;
+    }
+
+    .screen-3 .top-right {
+        top: -31px;
+        right: -37px;
+        scale: .6;
+    }
+
+    .screen-1-img .img-bottom-left {
+        left: -20px;
+        bottom: -20px;
+    }
+
+    .screen-1-img .img-middle-left {
+        left: -20px;
+    }
+
+    .screen-4 .rocketMan {
+        scale: .9;
+    }
+
+}
+
+@media only screen and (max-width: 1170px) {
+
+    .screen-3 .form-top-left {
+        left: -53px;
+        top: -31px;
+        scale: .6;
+    }
+
+    .screen-3 .rocketImage {
+        left: -40px;
+    }
+
+    .screen-1-img .img-bottom-right {
+        right: 62px;
+    }
+
+    .screen-2 .form-prop {
+        left: -60px;
+        bottom: -50px;
+        scale: .7;
+    }
+
+    .screen-1-img .img-middle-right {
+        right: 37px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+
+    /* HIDING SCREENS */
+    .screenBasic {
+        display: none;
+    }
+
+    #main {
+        background: linear-gradient(125deg, #39296C 0%, #2B1B4F 100%);
+    }
+
+    .introHeadingContainer {
+        max-width: 500px;
+        margin-inline: auto;
+    }
+
+    .introHeading {
+        font-size: 70px;
+    }
+
+    .dot {
+        bottom: 20px;
+    }
+}
 
 @media only screen and (max-width: 767px) {
     .span-two {
@@ -14,6 +161,42 @@
     br {
         display: none;
     }
+
+    .introHeading {
+        font-size: 60px;
+    }
+
+    .dot {
+        right: 50px;
+        height: 22px;
+        width: 22px;
+    }
 }
+
+@media only screen and (max-width: 584px) {
+
+    .introHeadingContainer {
+        max-width: 370px;
+        width: 100%;
+    }
+
+    .introHeading {
+        font-size: 55px;
+    }
+
+    .introSubHeading {
+        font-size: 18px;
+        line-height: 1.4;
+    }
+
+    .dot {
+        right: 5px;
+        bottom: 15px;
+        height: 20px;
+        width: 20px;
+    }
+}
+
+@media only screen and (max-width: 560px) {}
 
 @media only screen and (max-width: 480px) {}

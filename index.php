@@ -114,17 +114,17 @@
         <!-- ==== FORM END ==== -->
 
         <!-- ==== SCREEN 1 START ==== -->
-        <div class="screen-1  screenBasic">
+        <div class="screen-1  active screenBasic">
             <div class="screenWrapper">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 col-sm-12">
                             <div class="screen-1-text">
-                                <h3 class="fs-45 mb-15 fc-white fw-800 lh-1-3">
+                                <h3 class="screenHeading fs-45 mb-15 fc-white fw-800 lh-1-3">
                                     Stay Informed with <br>
                                     the Latest Features
                                 </h3>
-                                <p class="fs-24 fw-500 mb-15 fc-white">It's crucial to streamline HR processes, <br> enhance productivity.</p>
+                                <p class="screenSubHeading fs-24 fw-500 mb-15 fc-white">It's crucial to streamline HR processes, <br> enhance productivity.</p>
                             </div>
                             <div class="screen-1-img position-relative img__wrap">
                                 <div class="mainImg pl-2">
@@ -165,11 +165,11 @@
                     <div class="row">
                         <div class="col-lg-6 col-sm-12">
                             <div class="screen-2-text">
-                                <h3 class="fs-45 mb-15 fc-white fw-800 lh-1-3">
+                                <h3 class="screenHeading fs-45 mb-15 fc-white fw-800 lh-1-3">
                                     Unlocking the <br>
                                     Benefits of HRMS
                                 </h3>
-                                <p class="fs-24 fw-500 mb-50 fc-white">It's crucial to streamline HR processes, <br> enhance productivity.</p>
+                                <p class="screenSubHeading fs-24 fw-500 mb-50 fc-white">It's crucial to streamline HR processes, <br> enhance productivity.</p>
                             </div>
                             <div class="pl-4">
                                 <div class="screen-2-cards  card-pink pt-4 ">
@@ -223,10 +223,10 @@
                     <div class="row">
                         <div class="col-lg-6 col-sm-12">
                             <div class="screen-3-text pt-5">
-                                <h3 class="fs-45 mb-15 fc-white fw-800 lh-1-3">
+                                <h3 class="screenHeading fs-45 mb-15 fc-white fw-800 lh-1-3">
                                     USweet perks and even sweeter discounts.
                                 </h3>
-                                <p class="fs-24 fw-500 mb-50 fc-white">Made for remote teams everywhere.</p>
+                                <p class="screenSubHeading fs-24 fw-500 mb-50 fc-white">Made for remote teams everywhere.</p>
                             </div>
                             <div class="screen-3-img position-relative img__wrap">
                                 <div class="rocketImageContainer pl-2">
@@ -245,7 +245,7 @@
         <!-- ==== SCREEN 3 LOADER END ==== -->
 
         <!-- ==== SCREEN 4 ERROR START ==== -->
-        <div class="screen-4 active error-screen screenBasic">
+        <div class="screen-4  error-screen screenBasic">
             <div class="screenWrapper position-relative">
                 <!-- MORE PROPS -->
                 <img src="assets/images/screen-4/top-left-side.png" class="prop position-absolute top-left" alt="">
@@ -265,10 +265,10 @@
                     <div class="row">
                         <div class="col-lg-6 col-sm-12">
                             <div class="screen-4-text error-text pt-5">
-                                <h3 class="text-center fc-white fw-900 ">
+                                <h3 class="screenHeading text-center fc-white fw-900 ">
                                     Error
                                 </h3>
-                                <p class="fs-30 fw-500 text-center fc-white">Try Again!</p>
+                                <p class="screenSubHeading fs-30 fw-500 text-center fc-white">Try Again!</p>
                             </div>
 
                         </div>
