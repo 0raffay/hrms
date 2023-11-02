@@ -1,9 +1,8 @@
 const introTimeline = gsap.timeline({
     onComplete: () => {
-        // Use a callback to set the display property after the delay
         setTimeout(() => {
             document.querySelector(".introWrapper").style.display = "none";
-        }, 2000); // 2000ms (2 seconds) delay
+        }, 500);
     },
 });
 
@@ -46,7 +45,6 @@ introTimeline.to(".heading-1", {
     stagger: 0.2,
 });
 
-// Add a slight delay before animating the second heading part
 introTimeline.to({}, { duration: 0.2 });
 
 introTimeline.to(".heading-2", {
@@ -64,19 +62,13 @@ introTimeline.to(".dot", {
 introTimeline.to(".scrollButtonWrapper", {
     opacity: 1,
     y: 20,
-    // stagger: 1.5,
 });
 
 introTimeline.to("#introMain", {
     opacity: "0",
-    duration: 1,
+    duration: .5,
 });
 
-// introTimeline.to(".introWrapper", {
-//     delay: 2,
-//     display: "none",
-//     duration: 0.01, // Set a very short duration to change the display property
-// });
 
 // Start the animation
 introTimeline.play();

@@ -20,6 +20,11 @@ a:hover {
     text-decoration: none;
 }
 
+a:focus {
+    text-decoration: underline !important;
+    outline: none !important;
+}
+
 html,
 body {
     overflow-x: hidden;
@@ -397,6 +402,10 @@ label {
     font-weight: 700;
     line-height: normal;
     transition: all 250ms ease;
+}
+
+.btn:focus {
+    outline: 1px solid blueviolet !important;
 }
 
 .btn-lg {
@@ -876,6 +885,10 @@ label {
     z-index: 3;
 }
 
+.showPassButton:focus {
+    outline: 1px solid var(--clr-purple-700);
+}
+
 .showPassButton.active .open,
 .showPassButton .close {
     display: none;
@@ -910,6 +923,16 @@ input.hasText+label.floating-label {
 
 input.hasText~.inputFocusLine {
     background: var(--clr-purple-700);
+}
+
+
+/* ERROR */
+input.error+label.floating-label  {
+    color: crimson;
+}
+
+input.error~.inputFocusLine {
+    background: crimson;
 }
 
 /* password animaiton */
@@ -971,8 +994,19 @@ input.hasText~.inputFocusLine {
     transition: all 100ms ease;
 }
 
+.otherLoginButtons button:focus,
 .otherLoginButtons button:hover {
     background: #eeeeee;
+}
+
+.formButtonContainer button.hide {
+    position: absolute;
+    opacity: 0;
+    transform: translateY(-100%);
+}
+
+.formButtonContainer button {
+    transition: transform 250ms ease;
 }
 
 /**--- SETTING BASIC FORM END ---*/
@@ -1164,7 +1198,13 @@ input.hasText~.inputFocusLine {
     position: absolute;
     left: -110px;
     top: -69px;
+
+    transition: all 500ms ease;
 }
+
+.animate {
+    transform: translateX(50%);
+} 
 
 .screen-3 .star-prop {
     bottom: 150px;
@@ -1199,6 +1239,7 @@ input.hasText~.inputFocusLine {
     right: 0;
     top: 0;
 }
+
 .screen-4 .bottom-right {
     right: 0;
     bottom: 0;
@@ -1216,7 +1257,7 @@ input.hasText~.inputFocusLine {
 }
 
 .screen-4 .rocketMan {
-    top:6%;
+    top: 6%;
     left: 7%;
 }
 
@@ -1246,5 +1287,5 @@ input.hasText~.inputFocusLine {
 .dot {
     opacity: 0;
 }
-/**--- ANIMATION CSS END ---*/
 
+/**--- ANIMATION CSS END ---*/

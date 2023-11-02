@@ -23,7 +23,7 @@
     <?php include('includes/header.php') ?>
     <!--==== HEADER END ====-->
 
-    <div class="introWrapper">
+    <div class="introWrapper ">
         <div id="introMain" class=" d-flex align-items-center justify-content-center">
             <div class="introLoader ">
                 <img src="assets/images/logos/logo.png" alt="">
@@ -64,17 +64,17 @@
                                     <p class="form-sub-title fc-neutral-700 fs-12 fw-500 text-center lh-1-2 mb-10">Log in using email address</p>
                                 </div>
                                 <div class="cus-inputs mb-15">
-                                    <input type="email" name="email" id="email">
+                                    <input type="email" data-validate data-email name="email" id="email">
                                     <label for="email" class="floating-label fs-16 fw-400">Email Address</label>
                                     <span class="inputFocusLine"></span>
                                 </div>
                                 <div class="cus-inputs mb-15">
-                                    <input type="password" name="password" id="password">
+                                    <input type="password" data-validate name="password" id="password">
                                     <label for="password" class="floating-label fs-16 fw-400">Password</label>
                                     <span class="inputFocusLine"></span>
                                     <div class="passwordAnimation">
                                     </div>
-                                    <button class="showPassButton" onclick="showPass(e)">
+                                    <button class="showPassButton" tabindex="0">
                                         <span class="open"><i class="ri-eye-close-line"></i></span>
                                         <span class="close"><i class="ri-eye-line"></i></span>
                                     </button>
@@ -85,8 +85,10 @@
                                     </div>
                                     <label for="flexSwitchCheckDefault" class="mb-0 fs-12 fw-500 user-select-none fc-neutral-700">Remember for 30 days</label>
                                 </div>
-                                <div class="formButtonContainer">
-                                    <button class="btn btn-blue btn-lg fc-white bg-blue-700" onclick="(e)=>{e.preventDefault();}">Login</button>
+                                <div class="formButtonContainer overflow-hidden">
+                                    <button class="btn btn-blue btn-lg fc-white bg-blue-700 mainFormButton" form-submit>Login</button>
+                                    <button class="btn btn-blue btn-lg fc-white bg-pink-700 loadingFormButton hide">Loading</button>
+                                    <button class="btn btn-blue btn-lg gap-2 fc-white bg-purple-700 doneFormButton hide"><i class="ri-checkbox-circle-line fs-22 fw-400"></i>Login</button>
                                 </div>
                             </form>
                             <div class="form-seperator user-select-none d-flex justify-content-center align-items-center gap-10 my-3 fs-14 fw-500 fc-neutral-700">
@@ -230,7 +232,7 @@
                             </div>
                             <div class="screen-3-img position-relative img__wrap">
                                 <div class="rocketImageContainer pl-2">
-                                    <img class="rocketImage" src="assets/images/screen-3/rocket-img.png" height="622" width="507" alt="">
+                                    <img class="rocketImage" id="rocketImage" src="assets/images/screen-3/rocket-img.png" height="622" width="507" alt="">
                                 </div>
                             </div>
                         </div>

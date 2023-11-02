@@ -1,5 +1,52 @@
 $(document).ready(function () {
     formInputHandler();
+    validateForm(
+        {
+            button: "[form-submit]",
+            inputs: "[data-validate]",
+            email: {
+                selector: "[data-email]",
+            },
+        },
+        function () {
+            let timing = 1000;
+    
+            // Initially, hide the mainFormButton and show the loadingFormButton
+            $(".mainFormButton").addClass("hide");
+            $(".loadingFormButton").removeClass("hide");
+    
+            // After a delay, hide the loadingFormButton and show the doneFormButton
+            setTimeout(function () {
+                $(".loadingFormButton").addClass("hide");
+                $(".doneFormButton").removeClass("hide");
+            }, timing * 2);
+    
+            // Add a delay before changing the screen states and animating the rocketImage
+            setTimeout(function () {
+                // Change the screen states
+                $(".screenBasic").removeClass("active");
+                $(".loader-screen").addClass("active");
+    
+                setTimeout(function () {
+                    const rocket = document.getElementById("rocketImage");
+    
+                    // Use GSAP to animate the rocket
+                    gsap.to(rocket, {
+                        x: 1920, 
+                        y: -600, 
+                        duration: 3, // Animation duration in seconds
+                    });
+                }, 500); // 4 seconds delay
+            }, timing);
+    
+    
+            // Add a delay before showing the doneFormButton
+            setTimeout(function () {
+                $(".doneFormButton").removeClass("hide");
+                window.location.href = window.location.href;
+            }, timing * 3);
+        }
+    );
 });
 
 function validateForm(options, action) {
@@ -15,19 +62,19 @@ function validateForm(options, action) {
         options.email.regex ||
         /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
-    let telephone = $(options.telephone.selector);
-    let telephoneRegex = options.telephone.regex || /^\d{3}-\d{3}-\d{4}$/;
+    // let telephone = $(options.telephone.selector);
+    // let telephoneRegex = options.telephone.regex || /^\d{3}-\d{3}-\d{4}$/;
 
     let checkValidateType = {
         inputs: "empty",
         email: "email",
-        telephone: "telephone",
+        // telephone: "telephone",
     };
 
     function addUtilties() {
         inputs.attr("validation", checkValidateType.inputs);
         email.attr("validation", checkValidateType.email);
-        telephone.attr("validation", checkValidateType.telephone);
+        // telephone.attr("validation", checkValidateType.telephone);
     }
     addUtilties();
 
@@ -37,14 +84,14 @@ function validateForm(options, action) {
         function checkIfSpecialFields(input) {
             inputValidationType = input.attr("validation");
             emailValidationType = email.attr("validation");
-            telephoneValidationType = telephone.attr("validation");
+            // telephoneValidationType = telephone.attr("validation");
 
             if (inputValidationType == emailValidationType) {
                 isSpecial = true;
                 validateSpecialFields(email, emailRegex);
-            } else if (inputValidationType == telephoneValidationType) {
-                isSpecial = true;
-                validateSpecialFields(telephone, telephoneRegex);
+                // } else if (inputValidationType == telephoneValidationType) {
+                //     isSpecial = true;
+                //     validateSpecialFields(telephone, telephoneRegex);
             } else {
                 isSpecial = false;
             }
