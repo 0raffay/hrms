@@ -35,6 +35,7 @@ $(document).ready(function () {
                         x: 1920, 
                         y: -600, 
                         duration: 3, // Animation duration in seconds
+                        ease: Power4.easeOut,
                     });
                 }, 500); // 4 seconds delay
             }, timing);

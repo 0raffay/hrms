@@ -132,16 +132,16 @@
                                 <div class="mainImg pl-2">
                                     <img class="img-fluid img-responsive" src="assets/images/screen-1/main.png" height="605" width="474" alt="">
                                 </div>
-                                <div class="position-absolute img-middle-left">
+                                <div class="secondImg position-absolute img-middle-left">
                                     <img src="assets/images/screen-1/img-left.png" height="270" width="80" alt="">
                                 </div>
-                                <div class="position-absolute img-bottom-left">
+                                <div class="thirdImage position-absolute img-bottom-left">
                                     <img src="assets/images/screen-1/img-b-left.png" height="128" width="227" alt="">
                                 </div>
-                                <div class="position-absolute img-bottom-right">
+                                <div class="fourthImage position-absolute img-bottom-right">
                                     <img src="assets/images/screen-1/img-r-b.png" height="106" width="116" alt="">
                                 </div>
-                                <div class="position-absolute img-middle-right">
+                                <div class="fifthImage position-absolute img-middle-right">
                                     <img src="assets/images/screen-1/img-right.png" height="106" width="116" alt="">
                                 </div>
                             </div>

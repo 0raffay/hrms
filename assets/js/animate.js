@@ -1,8 +1,12 @@
+//INTRO START
+
 const introTimeline = gsap.timeline({
     onComplete: () => {
         setTimeout(() => {
             document.querySelector(".introWrapper").style.display = "none";
         }, 500);
+
+        sc1.play();
     },
 });
 
@@ -66,9 +70,40 @@ introTimeline.to(".scrollButtonWrapper", {
 
 introTimeline.to("#introMain", {
     opacity: "0",
-    duration: .5,
+    duration: 0.5,
 });
-
 
 // Start the animation
 introTimeline.play();
+
+//INTRO END
+
+//SCREEN-1
+
+const sc1 = gsap.timeline({
+    pause: true,
+});
+
+let sc1Images = document.querySelectorAll(".screen-1-img img");
+sc1Images.forEach(function (img) {
+    gsap.set(img, {
+        opacity: 0,
+    });
+});
+
+sc1.to({}, { duration: 1 });
+
+sc1.to(".mainImg img", {
+    delay: 2,
+    duration: 1,
+    opacity: 1,
+    stagger: .5,
+});
+sc1.to(".secondImg img, .fourthImage img", {
+    opacity: 1,
+    duration: 2,
+});
+sc1.to(".thirdImage img , .fifthImage img", {
+    opacity: 1,
+    duration: 3,
+});
