@@ -188,7 +188,6 @@ function formInputHandler() {
         const passwordInput = $("input#password");
         const parent = passwordInput.closest(".cus-inputs");
         const isVisible = passwordInput.attr("type") === "text";
-
         if (isVisible) {
             passwordInput.attr("type", "password");
             parent.removeClass("active");

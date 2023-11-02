@@ -983,6 +983,7 @@ input.hasText~.inputFocusLine {
     opacity: 0;
     transition: all 250ms ease;
     z-index: -1;
+    overflow: hidden;
 }
 
 .screenWrapper {
@@ -1064,12 +1065,15 @@ input.hasText~.inputFocusLine {
 .card-light-blue {
     background: linear-gradient(180deg, #4E9CEF 0%, #427FBF 100%);
 }
+
 .card-light-blue .cards-back {
     background: rgba(78, 156, 239, 0.30);
 }
+
 .card-dark-blue {
     background: linear-gradient(180deg, #3759A5 0%, #2B447B 100%);
 }
+
 .card-dark-blue .cards-back {
     background: #80A3EF;
 }
@@ -1077,6 +1081,7 @@ input.hasText~.inputFocusLine {
 .card-purple {
     background: #B549ED;
 }
+
 .card-purple .cards-back {
     background: #DCC0EB;
 }
@@ -1091,38 +1096,126 @@ input.hasText~.inputFocusLine {
     bottom: -26px;
 }
 
-.middle {
+.screen-2 .middle {
     top: 50%;
     transform: translateY(-50%);
 }
 
-.middle-prop-right {
+.screen-2 .middle-prop-right {
     right: 60px;
     rotate: 45deg;
 }
 
-.middle-prop-left {
+.screen-2 .middle-prop-left {
     left: 60px;
 }
 
-.top-right {
+.screen-2 .top-right {
     top: 0;
     right: 0;
 }
 
-.form-top-prop {
+.screen-2 .form-top-prop {
     top: -60px;
     left: 21%;
 }
 
-.bottom-left {
+.screen-2 .bottom-left {
     left: 30px;
     bottom: 30px;
 }
+
 /**--- SCREEN 2 END ---*/
 
 /**--- SCREEN 3 START ---*/
 .screen-3 {
-    background:  linear-gradient(125deg, #39296C 0%, #2B1B4F 100%);
+    background: linear-gradient(125deg, #39296C 0%, #2B1B4F 100%);
 }
+
+.screen-3 .form-top-left {
+    left: 42px;
+    top: 0px;
+}
+
+.screen-3 .clouds {
+    bottom: 0;
+    right: 0;
+}
+
+.screen-3 .behind-cloud {
+    width: 100%;
+}
+
+.screen-3 .top-middle-prop {
+    top: -46px;
+    display: block;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+}
+
+.screen-3 .rocketImageContainer {
+    min-height: 417px;
+}
+
+.screen-3 .rocketImage {
+    position: absolute;
+    left: -110px;
+    top: -69px;
+}
+
+.screen-3 .star-prop {
+    bottom: 150px;
+    left: 45%;
+    transform: translateX(-50%);
+}
+
+.screen-3 .top-right {
+    top: 20px;
+    right: 20px;
+}
+
 /**--- SCREEN 3 END ---*/
+
+
+/**--- SCREEN 4 / ERROR START ---*/
+.screen-4.error-screen {
+    background: #C00;
+}
+
+.error-text h3 {
+    font-size: 100px;
+    letter-spacing: 18px;
+}
+
+.screen-4 .top-left {
+    top: 0;
+    left: 0;
+}
+
+.screen-4 .top-right {
+    right: 0;
+    top: 0;
+}
+.screen-4 .bottom-right {
+    right: 0;
+    bottom: 0;
+}
+
+.screen-4 .rocketImage {
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.screen-4 .rope {
+    left: 136px;
+    bottom: 250px;
+}
+
+.screen-4 .rocketMan {
+    top:6%;
+    left: 7%;
+}
+
+/**--- SCREEN 4 / ERROR END ---*/

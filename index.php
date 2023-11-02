@@ -50,11 +50,12 @@
     </div>
 
     <main id="main">
+        <!-- ==== FORM START ==== -->
         <div class="formContainer">
             <div class=" container">
                 <div class="row justify-content-end">
-                    <div class="col-lg-6">
-                        <button id="change" class="btn bg-purple-700 fc-white">Change Screen</button>
+                    <div class="col-lg-6 text-right">
+                        <button id="change" class="btn bg-blue-700 fc-white">Change Screen</button>
                     </div>
                     <div class="col-lg-6">
                         <div class="formMain">
@@ -110,7 +111,9 @@
                 </div>
             </div>
         </div>
+        <!-- ==== FORM END ==== -->
 
+        <!-- ==== SCREEN 1 START ==== -->
         <div class="screen-1  screenBasic">
             <div class="screenWrapper">
                 <div class="container">
@@ -147,6 +150,9 @@
                 </div>
             </div>
         </div>
+        <!-- ==== SCREEN 1 END ==== -->
+
+        <!-- ==== SCREEN 2 START ==== -->
         <div class="screen-2  screenBasic">
             <div class="screenWrapper position-relative">
                 <!-- MORE PROPS -->
@@ -201,33 +207,79 @@
                 </div>
             </div>
         </div>
-        <div class="screen-3 active  screenBasic">
+        <!-- ==== SCREEN 2 END ==== -->
+
+        <!-- ==== SCREEN 3 LOADER START ==== -->
+        <div class="screen-3 loader-screen screenBasic">
             <div class="screenWrapper position-relative">
                 <!-- MORE PROPS -->
-
+                <img src="assets/images/screen-3/cloud-behind.png" class="prop position-absolute clouds behind-cloud" height="363" width="auto" alt="">
+                <img src="assets/images/screen-3/forward-cloud.png" class="prop position-absolute clouds forward-cloud" height="282" width="auto" alt="">
+                <img src="assets/images/screen-3/top-middle-prop.png" height="237" width="auto" alt="" class="prop position-absolute top-middle-prop">
+                <img src="assets/images/screen-3/star-prop.png" alt="" class="prop position-absolute star-prop">
+                <img src="assets/images/screen-3/top-right-side.png" alt="" class="prop position-absolute top-right" width="224" height="216">
 
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 col-sm-12">
-                            <div class="screen-2-text">
+                            <div class="screen-3-text pt-5">
                                 <h3 class="fs-45 mb-15 fc-white fw-800 lh-1-3">
                                     USweet perks and even sweeter discounts.
                                 </h3>
                                 <p class="fs-24 fw-500 mb-50 fc-white">Made for remote teams everywhere.</p>
                             </div>
-                            <div class="screen-1-img position-relative img__wrap">
-                                <div class="mainImg pl-2">
-                                    <img class="img-fluid img-responsive" src="assets/images/screen-3/rocket-img.png" height="557" width="417" alt="">
+                            <div class="screen-3-img position-relative img__wrap">
+                                <div class="rocketImageContainer pl-2">
+                                    <img class="rocketImage" src="assets/images/screen-3/rocket-img.png" height="622" width="507" alt="">
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-6 col-sm-12 position-relative">
+                            <!-- Form Prop -->
+                            <img src="assets/images/screen-3/form-left-prop.png" height="145" width="145" alt="" class="prop form-top-left position-absolute">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- ==== SCREEN 3 LOADER END ==== -->
 
+        <!-- ==== SCREEN 4 ERROR START ==== -->
+        <div class="screen-4 active error-screen screenBasic">
+            <div class="screenWrapper position-relative">
+                <!-- MORE PROPS -->
+                <img src="assets/images/screen-4/top-left-side.png" class="prop position-absolute top-left" alt="">
+                <img src="assets/images/screen-4/top-right-side.png" class="prop position-absolute top-right" alt="">
+                <img src="assets/images/screen-4/bottom-right-sidr.png" class="prop position-absolute bottom-right" alt="">
+
+                <!-- ROCKET -->
+                <img src="assets/images/screen-4/left-side-rocket.png" class="prop position-absolute rocketImage" alt="">
+
+                <!-- ROPE -->
+                <img src="assets/images/screen-4/rope-prop.png" class="prop position-absolute rope" alt="">
+
+                <!-- ASTRONAUT -->
+                <img src="assets/images/screen-4/astronaut.png" class="prop position-absolute rocketMan" alt="">
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-12">
+                            <div class="screen-4-text error-text pt-5">
+                                <h3 class="text-center fc-white fw-900 ">
+                                    Error
+                                </h3>
+                                <p class="fs-30 fw-500 text-center fc-white">Try Again!</p>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-6 col-sm-12 position-relative">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ==== SCREEN 4 ERROR END ==== -->
 
     </main>
 
