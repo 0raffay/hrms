@@ -805,6 +805,7 @@ label {
 }
 
 .formMain {
+    margin-inline: auto;
     padding-block: 33px;
     padding-inline: 40px;
     max-width: 454px;
@@ -1060,13 +1061,33 @@ input.hasText~.inputFocusLine {
     background-color: #FDA2ED;
 }
 
+.card-light-blue {
+    background: linear-gradient(180deg, #4E9CEF 0%, #427FBF 100%);
+}
+.card-light-blue .cards-back {
+    background: rgba(78, 156, 239, 0.30);
+}
+.card-dark-blue {
+    background: linear-gradient(180deg, #3759A5 0%, #2B447B 100%);
+}
+.card-dark-blue .cards-back {
+    background: #80A3EF;
+}
+
+.card-purple {
+    background: #B549ED;
+}
+.card-purple .cards-back {
+    background: #DCC0EB;
+}
+
 .screen-2-cards:not(.active) {
     display: none;
 }
 
 
 .screen-2 .form-prop {
-    left: -64px;
+    left: 29px;
     bottom: -26px;
 }
 
@@ -1098,5 +1119,10 @@ input.hasText~.inputFocusLine {
     left: 30px;
     bottom: 30px;
 }
-
 /**--- SCREEN 2 END ---*/
+
+/**--- SCREEN 3 START ---*/
+.screen-3 {
+    background:  linear-gradient(125deg, #39296C 0%, #2B1B4F 100%);
+}
+/**--- SCREEN 3 END ---*/

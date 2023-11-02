@@ -111,7 +111,7 @@
             </div>
         </div>
 
-        <div class="screen-1 active screenBasic">
+        <div class="screen-1  screenBasic">
             <div class="screenWrapper">
                 <div class="container">
                     <div class="row">
@@ -153,7 +153,7 @@
                 <img src="assets/images/screen-2/top-right.png" class="position-absolute top-right" alt="">
                 <img src="assets/images/screen-2/middle-prop.png" class="position-absolute  middle-prop-right" alt="">
                 <img src="assets/images/screen-2/middle-prop.png" class="position-absolute  middle-prop-left" alt="">
-                <img src="assets/images/screen-2/bottom-left.png" class="position-absolute      " alt="">
+                <img src="assets/images/screen-2/bottom-left.png" class="position-absolute  bottom-left" alt="">
 
                 <div class="container">
                     <div class="row">
@@ -166,7 +166,25 @@
                                 <p class="fs-24 fw-500 mb-50 fc-white">It's crucial to streamline HR processes, <br> enhance productivity.</p>
                             </div>
                             <div class="pl-4">
-                                <div class="screen-2-cards active card-pink pt-2 ">
+                                <div class="screen-2-cards  card-pink pt-4 ">
+                                    <div class="cards-back"></div>
+                                    <h5 class="fs-40 fw-800 fc-white lh-1-1 mb-25 text-center">Responsive <br>
+                                        Hr Portal</h5>
+                                    <img src="assets/images/screen-2/card-img.png" class="d-block mx-auto" height="272" width="236" alt="">
+                                </div>
+                                <div class="screen-2-cards card-light-blue pt-4 ">
+                                    <div class="cards-back"></div>
+                                    <h5 class="fs-40 fw-800 fc-white lh-1-1 mb-25 text-center">Responsive <br>
+                                        Hr Portal</h5>
+                                    <img src="assets/images/screen-2/card-img.png" class="d-block mx-auto" height="272" width="236" alt="">
+                                </div>
+                                <div class="screen-2-cards card-dark-blue pt-4 ">
+                                    <div class="cards-back"></div>
+                                    <h5 class="fs-40 fw-800 fc-white lh-1-1 mb-25 text-center">Responsive <br>
+                                        Hr Portal</h5>
+                                    <img src="assets/images/screen-2/card-img.png" class="d-block mx-auto" height="272" width="236" alt="">
+                                </div>
+                                <div class="screen-2-cards active card-purple pt-4 ">
                                     <div class="cards-back"></div>
                                     <h5 class="fs-40 fw-800 fc-white lh-1-1 mb-25 text-center">Responsive <br>
                                         Hr Portal</h5>
@@ -183,7 +201,33 @@
                 </div>
             </div>
         </div>
+        <div class="screen-3 active  screenBasic">
+            <div class="screenWrapper position-relative">
+                <!-- MORE PROPS -->
+
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-12">
+                            <div class="screen-2-text">
+                                <h3 class="fs-45 mb-15 fc-white fw-800 lh-1-3">
+                                    USweet perks and even sweeter discounts.
+                                </h3>
+                                <p class="fs-24 fw-500 mb-50 fc-white">Made for remote teams everywhere.</p>
+                            </div>
+                            <div class="screen-1-img position-relative img__wrap">
+                                <div class="mainImg pl-2">
+                                    <img class="img-fluid img-responsive" src="assets/images/screen-3/rocket-img.png" height="557" width="417" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-12 position-relative">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+
 
     </main>
 

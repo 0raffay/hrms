@@ -191,17 +191,19 @@ function formInputHandler() {
 
         if (isVisible) {
             passwordInput.attr("type", "password");
-            parent.removeClass('active');
+            parent.removeClass("active");
             $(this).removeClass("active");
         } else {
             passwordInput.attr("type", "text");
-            parent.addClass('active');
+            parent.addClass("active");
             $(this).addClass("active");
         }
     });
 }
-
-$('#change').click(function() {
-    $('.screen-2').addClass("active");
-    $('.screen-1').removeClass("active");
-})
+$("#change").click(function () {
+    let screenItems = $(".screenBasic");
+    let activeIndex = screenItems.index($(".screenBasic.active"));
+    screenItems.eq(activeIndex).removeClass("active");
+    activeIndex = (activeIndex + 1) % screenItems.length;
+    screenItems.eq(activeIndex).addClass("active");
+});
