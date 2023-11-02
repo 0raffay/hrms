@@ -154,6 +154,9 @@ function validateForm(options, action) {
             action();
         } else {
             $(this).addClass(disableClass);
+            $(".screenBasic").removeClass("active");
+            $(".error-screen").addClass("active");
+
         }
     });
 }

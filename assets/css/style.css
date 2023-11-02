@@ -1020,6 +1020,8 @@ input.error~.inputFocusLine {
     transition: all 250ms ease;
     z-index: -1;
     overflow: hidden;
+
+    transition: opacity 250ms ease;
 }
 
 .screenWrapper {
