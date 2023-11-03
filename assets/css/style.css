@@ -49,6 +49,9 @@ input[type='number'].hide-arrow::-webkit-inner-spin-button {
 ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
+
+    display: none;
+    appearance: none;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -799,6 +802,8 @@ label {
     width: 100%;
     position: relative;
 
+    display: none;
+
     background: linear-gradient(45deg, #333, #666); ;
 }
 
@@ -1321,3 +1326,7 @@ input.error~.inputFocusLine {
 }
 
 /* ROTATING CIRCLES */
+
+.fp-watermark{
+    display: none !important;   
+}

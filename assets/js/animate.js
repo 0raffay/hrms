@@ -1,9 +1,7 @@
 // TIMELINES START
 const introTimeline = gsap.timeline({
     onComplete: () => {
-        setTimeout(() => {
-            document.querySelector(".introWrapper").style.display = "none";
-        }, 500);
+        blockMousewheel = false;
         sc1.play();
     },
 });
@@ -70,6 +68,12 @@ introTimeline.to(".scrollButtonWrapper", {
 //     opacity: "0",
 //     duration: 0.5,
 // });
+
+introTimeline.to("#main", {
+    display: "block",
+    delay: 0,
+    duration: .1,
+});
 introTimeline.play();
 
 const sc1 = gsap.timeline({
@@ -128,7 +132,7 @@ function hideCard(cardSelector) {
         duration: 0.2,
     });
     sc2.set(cardSelector, {
-        clearProps: 'all', // Clear all properties after hiding
+        clearProps: "all", // Clear all properties after hiding
     });
 }
 
@@ -229,7 +233,6 @@ sc2.from(".card-dark-blue .cards-front", {
 // Hide Card After Animation
 hideCard(".card-dark-blue");
 
-
 //?SCREEN 2 END
 
 //TIMELINE END
@@ -266,4 +269,33 @@ var tl = gsap.timeline().to(".randomMovement", {
     ease: "none",
     repeat: -1,
     repeatRefresh: true,
+});
+$(document).ready(function () {
+    var scrolling = false;
+
+    function scrollToSection(section) {
+        scrolling = true;
+        $("html, body").animate(
+            {
+                scrollTop: $(section).offset().top,
+            },
+            200,
+            function () {
+                scrolling = false;
+            }
+        );
+    }
+
+    $(window).on("wheel", function (e) {
+        if (!scrolling) {
+            if (e.originalEvent.deltaY > 100) {
+                scrollToSection("#main");
+            }
+        }
+    });
+});
+var myFullpage = new fullpage("#fullpage", {
+    scrollingSpeed: 50,
+    // dropEffect: false,
+    // easing: 'linear',
 });

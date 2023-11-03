@@ -51,6 +51,7 @@ $ogImgPath =  "/assets/images/og.png";
 
 <!--==== FONTS END END ====-->
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.css" integrity="sha512-wCVOuVtxsXqrQK7tj9j4BvyfITQmpp7UE7mVilD7aieGLYFEIAa5UKTP1RapOf6dxQ9JIKAneakcyykWG4r4Ow==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <!--==== LOCAL FILE START ====-->
 <link rel="stylesheet" href="assets/css/style.css">
