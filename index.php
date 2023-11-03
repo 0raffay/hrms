@@ -14,7 +14,7 @@
     <!--==== HEADER STYLES START ====-->
     <?php include('includes/header-styles.php') ?>
     <!--==== HEADER STYLES END ====-->
-    <title>Home | <?php echo $siteName; ?></title>
+    <title>LOGIN | <?php echo $siteName; ?></title>
 </head>
 
 <body>
@@ -23,7 +23,7 @@
     <?php include('includes/header.php') ?>
     <!--==== HEADER END ====-->
 
-    <div class="introWrapper ">
+    <div class="introWrapper">
         <div id="introMain" class=" d-flex align-items-center justify-content-center">
             <div class="introLoader ">
                 <img src="assets/images/logos/logo.png" alt="">
@@ -51,7 +51,7 @@
     <main id="main">
         <!-- ==== FORM START ==== -->
         <div class="formContainer">
-            <div class=" container">
+            <div class="container">
                 <div class="row justify-content-end">
                     <div class="col-lg-6 text-right">
                         <button id="change" class="btn bg-blue-700 fc-white">Change Screen</button>
@@ -117,7 +117,12 @@
         <!-- ==== SCREEN 1 START ==== -->
         <div class="screen-1  active screenBasic">
             <div class="screenWrapper">
-                <!-- <img src="assets/images/screen-1/circles.png" class="circlesBg" alt="">? -->
+                <!-- ROTATING CICLES -->
+                <div class="circle_container">
+                    <canvas id="rotatingCircles"></canvas>
+                </div>
+
+
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 col-sm-12">
@@ -130,19 +135,19 @@
                             </div>
                             <div class="screen-1-img position-relative img__wrap">
                                 <div class="mainImg pl-2">
-                                    <img class="img-fluid img-responsive" src="assets/images/screen-1/main.png" height="605" width="474" alt="">
+                                    <img class="img-fluid img-responsive " src="assets/images/screen-1/main.png" height="605" width="474" alt="">
                                 </div>
                                 <div class="secondImg position-absolute img-middle-left">
-                                    <img src="assets/images/screen-1/img-left.png" height="270" width="80" alt="">
+                                    <img src="assets/images/screen-1/img-left.png" class="" height="270" width="80" alt="">
                                 </div>
                                 <div class="thirdImage position-absolute img-bottom-left">
-                                    <img src="assets/images/screen-1/img-b-left.png" height="128" width="227" alt="">
+                                    <img src="assets/images/screen-1/img-b-left.png" class="" height="128" width="227" alt="">
                                 </div>
                                 <div class="fourthImage position-absolute img-bottom-right">
-                                    <img src="assets/images/screen-1/img-r-b.png" height="106" width="116" alt="">
+                                    <img src="assets/images/screen-1/img-r-b.png" class="" height="106" width="116" alt="">
                                 </div>
                                 <div class="fifthImage position-absolute img-middle-right">
-                                    <img src="assets/images/screen-1/img-right.png" height="106" width="116" alt="">
+                                    <img src="assets/images/screen-1/img-right.png" class="" height="106" width="116" alt="">
                                 </div>
                             </div>
                         </div>
@@ -158,7 +163,7 @@
         <div class="screen-2  screenBasic">
             <div class="screenWrapper position-relative">
                 <!-- MORE PROPS -->
-                <img src="assets/images/screen-2/top-right.png" class="position-absolute top-right" alt="">
+                <img src="assets/images/screen-2/top-right.png" class="position-absolute   top-right" alt="">
                 <img src="assets/images/screen-2/middle-prop.png" class="position-absolute  middle-prop-right" alt="">
                 <img src="assets/images/screen-2/middle-prop.png" class="position-absolute  middle-prop-left" alt="">
                 <img src="assets/images/screen-2/bottom-left.png" class="position-absolute  bottom-left" alt="">
@@ -173,37 +178,45 @@
                                 </h3>
                                 <p class="screenSubHeading fs-24 fw-500 mb-50 fc-white">It's crucial to streamline HR processes, <br> enhance productivity.</p>
                             </div>
-                            <div class="pl-4">
-                                <div class="screen-2-cards  card-pink pt-4 ">
+                            <div class="pl-4 cardsContainer">
+                                <div class="screen-2-cards  card-pink">
                                     <div class="cards-back"></div>
-                                    <h5 class="fs-40 fw-800 fc-white lh-1-1 mb-25 text-center">Responsive <br>
-                                        Hr Portal</h5>
-                                    <img src="assets/images/screen-2/card-img.png" class="d-block mx-auto" height="272" width="236" alt="">
+                                    <div class="cards-front pt-4">
+                                        <h5 class="fs-40 fw-800 fc-white lh-1-1 mb-25 text-center">Responsive <br>
+                                            Hr Portal</h5>
+                                        <img src="assets/images/screen-2/card-img.png" class="d-block mx-auto" height="272" width="236" alt="">
+                                    </div>
                                 </div>
-                                <div class="screen-2-cards card-light-blue pt-4 ">
+                                <div class="screen-2-cards card-light-blue">
                                     <div class="cards-back"></div>
-                                    <h5 class="fs-40 fw-800 fc-white lh-1-1 mb-25 text-center">Responsive <br>
-                                        Hr Portal</h5>
-                                    <img src="assets/images/screen-2/card-img.png" class="d-block mx-auto" height="272" width="236" alt="">
+                                    <div class="cards-front pt-4">
+                                        <h5 class="fs-40 fw-800 fc-white lh-1-1 mb-25 text-center">Responsive <br>
+                                            Hr Portal</h5>
+                                        <img src="assets/images/screen-2/card-img.png" class="d-block mx-auto" height="272" width="236" alt="">
+                                    </div>
                                 </div>
-                                <div class="screen-2-cards card-dark-blue pt-4 ">
+                                <div class="screen-2-cards card-dark-blue">
                                     <div class="cards-back"></div>
-                                    <h5 class="fs-40 fw-800 fc-white lh-1-1 mb-25 text-center">Responsive <br>
-                                        Hr Portal</h5>
-                                    <img src="assets/images/screen-2/card-img.png" class="d-block mx-auto" height="272" width="236" alt="">
+                                    <div class="cards-front pt-4">
+                                        <h5 class="fs-40 fw-800 fc-white lh-1-1 mb-25 text-center">Responsive <br>
+                                            Hr Portal</h5>
+                                        <img src="assets/images/screen-2/card-img.png" class="d-block mx-auto" height="272" width="236" alt="">
+                                    </div>
                                 </div>
-                                <div class="screen-2-cards active card-purple pt-4 ">
+                                <div class="screen-2-cards  card-purple">
                                     <div class="cards-back"></div>
-                                    <h5 class="fs-40 fw-800 fc-white lh-1-1 mb-25 text-center">Responsive <br>
-                                        Hr Portal</h5>
-                                    <img src="assets/images/screen-2/card-img.png" class="d-block mx-auto" height="272" width="236" alt="">
+                                    <div class="cards-front pt-4">
+                                        <h5 class="fs-40 fw-800 fc-white lh-1-1 mb-25 text-center">Responsive <br>
+                                            Hr Portal</h5>
+                                        <img src="assets/images/screen-2/card-img.png" class="d-block mx-auto" height="272" width="236" alt="">
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-6 col-sm-12 position-relative">
+                            <img src="assets/images/screen-2/form-top.png " height="30" width="30" class="position-absolute form-top-prop randomMovement" alt="">
                             <!-- PROPS -->
                             <img src="assets/images/screen-2/form-prop.png" height="173.34" width="173.34" class="position-absolute form-prop" alt="">
-                            <img src="assets/images/screen-2/form-top.png" height="30" width="30" class="position-absolute form-top-prop" alt="">
                         </div>
                     </div>
                 </div>

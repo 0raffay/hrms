@@ -728,9 +728,9 @@ label {
 
     height: 100vh;
     width: 100%;
-    position: fixed;
+    /* position: fixed;
     inset: 0;
-    z-index: 4;
+    z-index: 4; */
 }
 
 .introHeadingContainer {
@@ -799,7 +799,7 @@ label {
     width: 100%;
     position: relative;
 
-
+    background: linear-gradient(45deg, #333, #666); ;
 }
 
 .formContainer {
@@ -927,7 +927,7 @@ input.hasText~.inputFocusLine {
 
 
 /* ERROR */
-input.error+label.floating-label  {
+input.error+label.floating-label {
     color: crimson;
 }
 
@@ -1021,7 +1021,7 @@ input.error~.inputFocusLine {
     z-index: -1;
     overflow: hidden;
 
-    transition: opacity 250ms ease;
+    transition: opacity 250ms ease-in-out;
 }
 
 .screenWrapper {
@@ -1068,18 +1068,18 @@ input.error~.inputFocusLine {
     background: linear-gradient(0deg, #530B77 0%, #530B77 100%);
 }
 
+.cardsContainer {
+    min-height: 409px;
+}
+
 .screen-2-cards {
     max-width: 402.474px;
     width: 100%;
-}
-
-.screen-2-cards {
-    border-radius: 40px;
     position: relative;
 }
 
-.card-pink {
-    background: #F53ED6;
+.screen-2-cards .cards-front {
+    border-radius: 40px;
 }
 
 .cards-back {
@@ -1092,7 +1092,7 @@ input.error~.inputFocusLine {
     z-index: -1;
 }
 
-.card-pink {
+.card-pink .cards-front {
     background-color: #F53ED6;
 }
 
@@ -1100,7 +1100,7 @@ input.error~.inputFocusLine {
     background-color: #FDA2ED;
 }
 
-.card-light-blue {
+.card-light-blue .cards-front {
     background: linear-gradient(180deg, #4E9CEF 0%, #427FBF 100%);
 }
 
@@ -1108,7 +1108,7 @@ input.error~.inputFocusLine {
     background: rgba(78, 156, 239, 0.30);
 }
 
-.card-dark-blue {
+.card-dark-blue .cards-front {
     background: linear-gradient(180deg, #3759A5 0%, #2B447B 100%);
 }
 
@@ -1116,7 +1116,7 @@ input.error~.inputFocusLine {
     background: #80A3EF;
 }
 
-.card-purple {
+.card-purple .cards-front {
     background: #B549ED;
 }
 
@@ -1127,7 +1127,6 @@ input.error~.inputFocusLine {
 .screen-2-cards:not(.active) {
     display: none;
 }
-
 
 .screen-2 .form-prop {
     left: 29px;
@@ -1142,10 +1141,12 @@ input.error~.inputFocusLine {
 .screen-2 .middle-prop-right {
     right: 60px;
     rotate: 45deg;
+    animation: rotating-circles 5s linear infinite;
 }
 
 .screen-2 .middle-prop-left {
     left: 60px;
+    animation: rotating-circles 5s linear infinite;
 }
 
 .screen-2 .top-right {
@@ -1156,6 +1157,8 @@ input.error~.inputFocusLine {
 .screen-2 .form-top-prop {
     top: -60px;
     left: 21%;
+    height: 30px;
+    width: 30px;
 }
 
 .screen-2 .bottom-left {
@@ -1200,13 +1203,13 @@ input.error~.inputFocusLine {
     position: absolute;
     left: -110px;
     top: -69px;
-
     transition: all 500ms ease;
+    z-index: 5;
 }
 
 .animate {
     transform: translateX(50%);
-} 
+}
 
 .screen-3 .star-prop {
     bottom: 150px;
@@ -1290,4 +1293,31 @@ input.error~.inputFocusLine {
     opacity: 0;
 }
 
+.opacity-0 {
+    opacity: 0;
+}
+
 /**--- ANIMATION CSS END ---*/
+/* ROTATING CIRCLES */
+@keyframes rotating-circles {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+#rotatingCircles {
+    animation: rotating-circles 10s linear infinite;
+}
+
+.circle_container {
+    position: absolute;
+    top: -1060px;
+    left: -1070px;
+}
+
+/* ROTATING CIRCLES */
