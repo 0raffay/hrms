@@ -26,7 +26,7 @@
         <div class="introWrapper section">
             <div id="introMain" class=" d-flex align-items-center justify-content-center">
                 <div class="introLoader ">
-                    <img src="assets/images/logos/logo.png" alt="">
+                    <img alt="Reload Page" width="207" height="225px" src="assets/images/logos/logo.png">
                 </div>
                 <div class="introHeadingContainer text-center">
                     <h1 class="introHeading fc-white">
@@ -53,7 +53,7 @@
             <div class="formContainer">
                 <div class="container">
                     <div class="row justify-content-center justify-content-lg-end">
-                        <div class="col-lg-6 d-md-none text-right">
+                        <div class="col-lg-6 text-right">
                             <button id="change" class="btn bg-blue-700 fc-white">Change Screen</button>
                         </div>
                         <div class="col-lg-6 col-md-12">
@@ -98,11 +98,11 @@
                                 </div>
                                 <div class="otherLoginButtons mb-20">
                                     <button class="fs-14 btn-lg fw-500 mb-15">
-                                        <img height="26px" width="26px" src="assets/images/icons/google.png">
+                                        <img alt="Reload Page" height="26px" width="26px" src="assets/images/icons/google.png">
                                         Sign in with google
                                     </button>
                                     <button class="fs-14 fw-500 btn-lg">
-                                        <img height="26px" width="26px" src="assets/images/icons/apple.png">
+                                        <img alt="Reload Page" height="26px" width="26px" src="assets/images/icons/apple.png">
                                         Sign in with Apple ID
                                     </button>
                                 </div>
@@ -135,19 +135,19 @@
                                 </div>
                                 <div class="screen-1-img position-relative img__wrap">
                                     <div class="mainImg pl-2">
-                                        <img class="img-fluid img-responsive " src="assets/images/screen-1/main.png" height="605" width="474" alt="">
+                                        <img alt="Reload Page" class="img-fluid img-responsive " src="assets/images/screen-1/main.png" height="605" width="474">
                                     </div>
                                     <div class="secondImg position-absolute img-middle-left">
-                                        <img src="assets/images/screen-1/img-left.png" class="" height="270" width="80" alt="">
+                                        <img alt="Reload Page" src="assets/images/screen-1/img-left.png" height="270" width="80">
                                     </div>
                                     <div class="thirdImage position-absolute img-bottom-left">
-                                        <img src="assets/images/screen-1/img-b-left.png" class="" height="128" width="227" alt="">
+                                        <img alt="Reload Page" src="assets/images/screen-1/img-b-left.png" height="128" width="227">
                                     </div>
                                     <div class="fourthImage position-absolute img-bottom-right">
-                                        <img src="assets/images/screen-1/img-r-b.png" class="" height="106" width="116" alt="">
+                                        <img alt="Reload Page" src="assets/images/screen-1/img-r-b.png" height="106" width="116">
                                     </div>
                                     <div class="fifthImage position-absolute img-middle-right">
-                                        <img src="assets/images/screen-1/img-right.png" class="" height="106" width="116" alt="">
+                                        <img alt="Reload Page" src="assets/images/screen-1/img-right.png" height="106" width="116">
                                     </div>
                                 </div>
                             </div>
@@ -163,10 +163,10 @@
             <div class="screen-2  screenBasic">
                 <div class="screenWrapper position-relative">
                     <!-- MORE PROPS -->
-                    <img src="assets/images/screen-2/top-right.png" class="position-absolute   top-right" alt="">
-                    <img src="assets/images/screen-2/middle-prop.png" class="position-absolute  middle-prop-right" alt="">
-                    <img src="assets/images/screen-2/middle-prop.png" class="position-absolute  middle-prop-left" alt="">
-                    <img src="assets/images/screen-2/bottom-left.png" class="position-absolute  bottom-left" alt="">
+                    <img alt="Reload Page" src="assets/images/screen-2/top-right.png" width="119" height="133" class="position-absolute   top-right">
+                    <img alt="Reload Page" src="assets/images/screen-2/middle-prop.png" width="42" height="45" class="position-absolute  middle-prop-right">
+                    <img alt="Reload Page" src="assets/images/screen-2/middle-prop.png" width="42" height="45" class="position-absolute  middle-prop-left">
+                    <img alt="Reload Page" src="assets/images/screen-2/bottom-left.png" width="178" height="42" class="position-absolute  bottom-left">
 
                     <div class="container">
                         <div class="row">
@@ -184,7 +184,7 @@
                                         <div class="cards-front pt-4">
                                             <h5 class="fs-40 fw-800 fc-white lh-1-1 mb-25 text-center">Responsive <br>
                                                 Hr Portal</h5>
-                                            <img src="assets/images/screen-2/card-img.png" class="d-block mx-auto" height="272" width="236" alt="">
+                                            <img alt="Reload Page" src="assets/images/screen-2/card-img.png" class="d-block mx-auto" height="272" width="236">
                                         </div>
                                     </div>
                                     <div class="screen-2-cards card-light-blue">
@@ -192,7 +192,7 @@
                                         <div class="cards-front pt-4">
                                             <h5 class="fs-40 fw-800 fc-white lh-1-1 mb-25 text-center">Responsive <br>
                                                 Hr Portal</h5>
-                                            <img src="assets/images/screen-2/card-img.png" class="d-block mx-auto" height="272" width="236" alt="">
+                                            <img alt="Reload Page" src="assets/images/screen-2/card-img.png" class="d-block mx-auto" height="272" width="236">
                                         </div>
                                     </div>
                                     <div class="screen-2-cards card-dark-blue">
@@ -200,7 +200,7 @@
                                         <div class="cards-front pt-4">
                                             <h5 class="fs-40 fw-800 fc-white lh-1-1 mb-25 text-center">Responsive <br>
                                                 Hr Portal</h5>
-                                            <img src="assets/images/screen-2/card-img.png" class="d-block mx-auto" height="272" width="236" alt="">
+                                            <img alt="Reload Page" src="assets/images/screen-2/card-img.png" class="d-block mx-auto" height="272" width="236">
                                         </div>
                                     </div>
                                     <div class="screen-2-cards  card-purple">
@@ -208,15 +208,15 @@
                                         <div class="cards-front pt-4">
                                             <h5 class="fs-40 fw-800 fc-white lh-1-1 mb-25 text-center">Responsive <br>
                                                 Hr Portal</h5>
-                                            <img src="assets/images/screen-2/card-img.png" class="d-block mx-auto" height="272" width="236" alt="">
+                                            <img alt="Reload Page" src="assets/images/screen-2/card-img.png" class="d-block mx-auto" height="272" width="236">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-sm-12 position-relative">
-                                <img src="assets/images/screen-2/form-top.png " height="30" width="30" class="position-absolute form-top-prop randomMovement" alt="">
+                                <img alt="Reload Page" src="assets/images/screen-2/form-top.png " height="30" width="30" class="position-absolute form-top-prop randomMovement">
                                 <!-- PROPS -->
-                                <img src="assets/images/screen-2/form-prop.png" height="173.34" width="173.34" class="position-absolute form-prop" alt="">
+                                <img alt="Reload Page" src="assets/images/screen-2/form-prop.png" height="173.34" width="173.34" class="position-absolute form-prop">
                             </div>
                         </div>
                     </div>
@@ -224,8 +224,8 @@
             </div>
             <!-- ==== SCREEN 2 END ==== -->
             <!-- MOBILE PROPS -->
-            <img src="assets/images/screen-3/phone-left-prop.png" class="mobileProps prop position-absolute mobile-left" alt="">
-            <img src="assets/images/screen-3/phone-rocket-img.png" class="mobileProps prop position-absolute mobile-rocket " id="rocketImage2" alt="">
+            <img alt="Reload Page" src="assets/images/screen-3/phone-left-prop.png" width="331" height="339" class="mobileProps prop position-absolute mobile-left">
+            <img alt="Reload Page" src="assets/images/screen-3/phone-rocket-img.png" width="216" height="258" class="mobileProps prop position-absolute mobile-rocket " id="rocketImage2">
 
 
             <!-- ==== SCREEN 3 LOADER START ==== -->
@@ -233,11 +233,11 @@
                 <div class="screenWrapper position-relative">
 
                     <!-- MORE PROPS -->
-                    <img src="assets/images/screen-3/cloud-behind.png" class="prop position-absolute clouds  customHide behind-cloud" height="363" width="auto" alt="">
-                    <img src="assets/images/screen-3/forward-cloud.png" class="prop position-absolute clouds  customHide forward-cloud" height="282" width="auto" alt="">
-                    <img src="assets/images/screen-3/top-middle-prop.png" height="237" width="auto" alt="" class="prop customHide position-absolute top-middle-prop">
-                    <img src="assets/images/screen-3/star-prop.png" alt="" class="prop position-absolute customHide star-prop">
-                    <img src="assets/images/screen-3/top-right-side.png" alt="" class="prop position-absolute top-right" width="224" height="216">
+                    <img alt="Reload Page" src="assets/images/screen-3/cloud-behind.png" class="prop position-absolute clouds  customHide behind-cloud" height="363" width="auto">
+                    <img alt="Reload Page" src="assets/images/screen-3/forward-cloud.png" class="prop position-absolute clouds  customHide forward-cloud" height="282" width="auto">
+                    <img alt="Reload Page" src="assets/images/screen-3/top-middle-prop.png" height="237" width="auto" class="prop customHide position-absolute top-middle-prop">
+                    <img alt="Reload Page" src="assets/images/screen-3/star-prop.png" width="46" height="46" class="prop position-absolute customHide star-prop">
+                    <img alt="Reload Page" src="assets/images/screen-3/top-right-side.png" class="prop position-absolute top-right" width="224" height="216">
 
                     <div class="container">
                         <div class="row">
@@ -250,13 +250,13 @@
                                 </div>
                                 <div class="screen-3-img position-relative img__wrap">
                                     <div class="rocketImageContainer pl-2">
-                                        <img class="rocketImage" id="rocketImage" src="assets/images/screen-3/rocket-img.png" height="622" width="507" alt="">
+                                        <img alt="Reload Page" class="rocketImage" id="rocketImage" src="assets/images/screen-3/rocket-img.png" height="622" width="507">
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-sm-12 position-relative">
                                 <!-- Form Prop -->
-                                <img src="assets/images/screen-3/form-left-prop.png" height="145" width="145" alt="" class="prop customHide form-top-left position-absolute">
+                                <img alt="Reload Page" src="assets/images/screen-3/form-left-prop.png" height="145" width="145" class="prop customHide form-top-left position-absolute">
                             </div>
                         </div>
                     </div>
@@ -268,18 +268,18 @@
             <div class="screen-4  error-screen screenBasic">
                 <div class="screenWrapper customHide position-relative">
                     <!-- MORE PROPS -->
-                    <img src="assets/images/screen-4/top-left-side.png" class="prop position-absolute top-left" alt="">
-                    <img src="assets/images/screen-4/top-right-side.png" class="prop position-absolute top-right" alt="">
-                    <img src="assets/images/screen-4/bottom-right-sidr.png" class="prop position-absolute bottom-right" alt="">
+                    <img alt="Reload Page" src="assets/images/screen-4/top-left-side.png" width="240" height="222" class="prop position-absolute top-left">
+                    <img alt="Reload Page" src="assets/images/screen-4/top-right-side.png" width="123" height="148" class="prop position-absolute top-right">
+                    <img alt="Reload Page" src="assets/images/screen-4/bottom-right-sidr.png" width="170" height="169" class="prop position-absolute bottom-right">
 
                     <!-- ROCKET -->
-                    <img src="assets/images/screen-4/left-side-rocket.png" class="prop position-absolute rocketImage" alt="">
+                    <img alt="Reload Page" src="assets/images/screen-4/left-side-rocket.png" width="340" height="442" class="prop position-absolute rocketImage">
 
                     <!-- ROPE -->
-                    <img src="assets/images/screen-4/rope-prop.png" class="prop position-absolute rope" alt="">
+                    <img alt="Reload Page" src="assets/images/screen-4/rope-prop.png" height="504" width="622" class="prop position-absolute rope">
 
                     <!-- ASTRONAUT -->
-                    <img src="assets/images/screen-4/astronaut.png" class="prop position-absolute rocketMan" alt="">
+                    <img alt="Reload Page" src="assets/images/screen-4/astronaut.png"  width="492" height="280" class="prop position-absolute rocketMan">
 
                     <div class="container">
                         <div class="row">

@@ -1350,7 +1350,7 @@ input.error~.inputFocusLine {
 .mobile-left {
     left: 0;
     bottom: 0;
-    z-index: 1;
+    z-index: 2;
 }
 
 .mobileProps {

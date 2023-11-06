@@ -1,15 +1,20 @@
 <?php
 // SITE DATA:
-$siteEmail ="";
-$sitePhone="";
+$siteEmail = "";
+$sitePhone = "";
+$siteName = "HRMS";
+if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
+    $siteURL = "https://";
+else
+    $siteURL = "http://";
+$siteURL .= $_SERVER['HTTP_HOST'];
 
 // OG DATA:
-$siteName = "HRMS";
-$siteURL = "";
 $ogContent1 = "Welcome to Our HRMS";
 $ogContent2 = "Your Gateway to Human Resources Management";
-$ogImgPath =  "/assets/images/og.png";
+$ogImgPath =  "$siteURL/hrms/assets/images/og.png";
 ?>
+
 
 
 <!--==== FAVICON START ====-->
@@ -18,7 +23,7 @@ $ogImgPath =  "/assets/images/og.png";
 
 
 <!--==== OFINFO START ====-->
-<meta property="og:url" content="<?php echo $siteURL?>">
+<meta property="og:url" content="<?php echo $siteURL ?>">
 <meta property="og:type" content="website">
 <meta property="og:title" content="<?php echo $ogContent1 ?>">
 <meta property="og:description" content="<?php echo $ogContent2 ?>">
@@ -29,16 +34,16 @@ $ogImgPath =  "/assets/images/og.png";
 <meta property="twitter:url" content="<?php echo $siteURL ?>">
 <meta name="twitter:title" content="<?php echo $ogContent1 ?>">
 <meta name="twitter:description" content="<?php echo $ogContent2 ?>">
-<meta name="twitter:image" content="<?php echo $ogImgPath?>">
+<meta name="twitter:image" content="<?php echo $ogImgPath ?>">
 
-<meta property="og:image" content="<?php echo $ogImgPath?>" />
-<meta property="og:image:secure_url" content="<?php echo $ogImgPath?>" />
+<meta property="og:image" content="<?php echo $ogImgPath ?>" />
+<meta property="og:image:secure_url" content="<?php echo $ogImgPath ?>" />
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="600" />
 <meta property="og:image:height" content="330" />
 <meta property="og:image:alt" content="<?php echo $ogContent1 ?>" />
-<meta name="image" property="og:image" content="<?php echo $ogImgPath?>">
-<meta name="author" content="<?php echo $siteName?>">
+<meta name="image" property="og:image" content="<?php echo $ogImgPath ?>">
+<meta name="author" content="<?php echo $siteName ?>">
 <meta name="description" property="og:description" content="<?php echo $ogContent2 ?>">
 <!--==== OFINFO END ====-->
 
@@ -57,4 +62,3 @@ $ogImgPath =  "/assets/images/og.png";
 <link rel="stylesheet" href="assets/css/style.css">
 <link rel="stylesheet" href="assets/css/responsive.css">
 <!--==== LOCAL FILE END ====-->
-
