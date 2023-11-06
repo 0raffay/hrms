@@ -1,8 +1,12 @@
 // TIMELINES START
 const introTimeline = gsap.timeline({
     onComplete: () => {
-        blockMousewheel = false;
         sc1.play();
+
+        var myFullpage = new fullpage("#fullpage", {
+            scrollingSpeed: 700,
+        });
+        
     },
 });
 
@@ -64,15 +68,11 @@ introTimeline.to(".scrollButtonWrapper", {
     y: 20,
 });
 
-// introTimeline.to("#introMain", {
-//     opacity: "0",
-//     duration: 0.5,
-// });
 
 introTimeline.to("#main", {
-    display: "block",
+    display: "flex",
     delay: 0,
-    duration: .1,
+    duration: 0.1,
 });
 introTimeline.play();
 
@@ -120,7 +120,6 @@ sc1.from(".fifthImage img", {
     duration: 0.5,
 });
 
-//? SCREEN 2
 const sc2 = gsap.timeline({
     paused: true,
     repeat: -1,
@@ -129,107 +128,79 @@ const sc2 = gsap.timeline({
 function hideCard(cardSelector) {
     sc2.to(cardSelector, {
         opacity: 0,
-        duration: 0.2,
+        duration: 0.4,
+        delay: 1.25, // Increase the delay to 2 seconds
     });
     sc2.set(cardSelector, {
-        clearProps: "all", // Clear all properties after hiding
+        display: "none",
     });
 }
 
 function showCard(cardSelector) {
     sc2.to(cardSelector, {
         display: "block",
-        opacity: 1, // Set opacity to 1 to make it visible
+        // opacity: 1,
         duration: 0.1,
         delay: 0,
+    });
+
+    sc2.to(cardSelector, {
+        opacity: 1,
+        duration: 0.2,
+        delay: 0,
+    });
+}
+
+function cardsBackAnimation(selector) {
+    sc2.from(selector, {
+        opacity: 0,
+        y: -120,
+        x: -70,
+        rotate: -12,
+        // duration: 1.25,
+        duration: 1,
+        ease: "power2.out",
+    });
+}
+
+function cardsFrontAnimation(selector) {
+    sc2.from(selector, {
+        opacity: 0.5,
+        x: -20,
+        y: 100,
+        rotate: 2,
+        // duration: 1.25,
+        duration: 1.9,
+        ease: "power2.out",
+        delay: -1.5,
     });
 }
 
 // FIRST CARD
 showCard(".card-pink");
-
-sc2.from(".card-pink .cards-back", {
-    opacity: 0,
-    y: -80,
-    x: -50,
-    rotate: -12,
-    duration: 1.5,
-    ease: "power2.out",
-});
-
-sc2.from(".card-pink .cards-front", {
-    opacity: 0,
-    duration: 1.5,
-    ease: "power2.out",
-    delay: -1.3,
-});
-
+cardsBackAnimation(".card-pink .cards-back");
+cardsFrontAnimation(".card-pink .cards-front");
 // Hide Card After Animation
 hideCard(".card-pink");
 
 // SECOND CARD
 showCard(".card-light-blue");
-
-sc2.from(".card-light-blue .cards-back", {
-    opacity: 0,
-    y: -80,
-    x: -50,
-    rotate: -12,
-    duration: 1.5,
-    ease: "power2.out",
-});
-
-sc2.from(".card-light-blue .cards-front", {
-    opacity: 0,
-    duration: 1.5,
-    ease: "power2.out",
-    delay: -1.3,
-});
-
+cardsBackAnimation(".card-light-blue .cards-back");
+cardsFrontAnimation(".card-light-blue .cards-front");
 // Hide Card After Animation
 hideCard(".card-light-blue");
 
 // THIRD CARD
 showCard(".card-purple");
-
-sc2.from(".card-purple .cards-back", {
-    opacity: 0,
-    y: -80,
-    x: -50,
-    rotate: -12,
-    duration: 1.5,
-    ease: "power2.out",
-});
-
-sc2.from(".card-purple .cards-front", {
-    opacity: 0,
-    duration: 1.5,
-    ease: "power2.out",
-    delay: -1.3,
-});
-
+cardsBackAnimation(".card-purple .cards-back");
+cardsFrontAnimation(".card-purple .cards-front");
 // Hide Card After Animation
 hideCard(".card-purple");
 
 // LAST CARD
 showCard(".card-dark-blue");
-
-sc2.from(".card-dark-blue .cards-back", {
-    opacity: 0,
-    y: -80,
-    x: -50,
-    rotate: -12,
-    duration: 1.5,
-    ease: "power2.out",
-});
-
-sc2.from(".card-dark-blue .cards-front", {
-    opacity: 0,
-    duration: 1.5,
-    ease: "power2.out",
-    delay: -1.3,
-});
-
+cardsBackAnimation(".card-dark-blue .cards-back");
+cardsFrontAnimation(".card-dark-blue .cards-front");
 // Hide Card After Animation
 hideCard(".card-dark-blue");
 
@@ -270,32 +241,5 @@ var tl = gsap.timeline().to(".randomMovement", {
     repeat: -1,
     repeatRefresh: true,
 });
-$(document).ready(function () {
-    var scrolling = false;
 
-    function scrollToSection(section) {
-        scrolling = true;
-        $("html, body").animate(
-            {
-                scrollTop: $(section).offset().top,
-            },
-            200,
-            function () {
-                scrolling = false;
-            }
-        );
-    }
 
-    $(window).on("wheel", function (e) {
-        if (!scrolling) {
-            if (e.originalEvent.deltaY > 100) {
-                scrollToSection("#main");
-            }
-        }
-    });
-});
-var myFullpage = new fullpage("#fullpage", {
-    scrollingSpeed: 50,
-    // dropEffect: false,
-    // easing: 'linear',
-});

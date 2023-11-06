@@ -736,6 +736,7 @@ label {
     z-index: 4; */
 }
 
+
 .introHeadingContainer {
     max-width: 761px;
     width: 100%;
@@ -806,6 +807,7 @@ label {
 
     background: linear-gradient(45deg, #333, #666); ;
 }
+
 
 .formContainer {
     position: absolute;
