@@ -162,6 +162,10 @@
         bottom: 30px;
         scale: .7;
     }
+
+    body:has(.loader-screen.active) .mobileProps {
+        display: block;
+    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -220,6 +224,10 @@
 
     .cus-inputs .floating-label {
         font-size: 14px;
+    }
+
+    .mobile-rocket {
+        height: 100px;
     }
 }
 

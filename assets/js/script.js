@@ -31,7 +31,7 @@ $(document).ready(function () {
                     });
                     const rocket2 = document.getElementById("rocketImage2");
                     gsap.to(rocket2, {
-                        x: 1920, 
+                        x: 500, 
                         y: -400, 
                         duration: 3,
                         ease: Power4.easeOut,

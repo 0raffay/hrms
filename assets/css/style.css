@@ -1340,7 +1340,7 @@ input.error~.inputFocusLine {
 }
 
 
-.screen-3 .rocketImage.mobile-rocket {
+.mobile-rocket {
     left: 0;
     bottom: 0;
     top: unset;
@@ -1350,4 +1350,9 @@ input.error~.inputFocusLine {
 .mobile-left {
     left: 0;
     bottom: 0;
+    z-index: 1;
+}
+
+.mobileProps {
+    display: none;
 }

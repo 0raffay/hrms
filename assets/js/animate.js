@@ -258,4 +258,3 @@ $(".prevDef").click(function (e) {
     e.preventDefault();
 });
 
-

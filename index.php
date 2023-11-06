@@ -223,13 +223,14 @@
                 </div>
             </div>
             <!-- ==== SCREEN 2 END ==== -->
+            <!-- MOBILE PROPS -->
+            <img src="assets/images/screen-3/phone-left-prop.png" class="mobileProps prop position-absolute mobile-left" alt="">
+            <img src="assets/images/screen-3/phone-rocket-img.png" class="mobileProps prop position-absolute mobile-rocket " id="rocketImage2" alt="">
+
 
             <!-- ==== SCREEN 3 LOADER START ==== -->
             <div class="screen-3 loader-screen screenBasic">
                 <div class="screenWrapper position-relative">
-                    <!-- MOBILE PROPS -->
-                    <img src="assets/images/screen-3/phone-left-prop.png" class="prop position-absolute mobile-left" alt="">
-                    <img src="assets/images/screen-3/phone-rocket-img.png" class="prop position-absolute mobile-rocket rocketImage d-lg-none d-block" id="rocketImage2" alt="">
 
                     <!-- MORE PROPS -->
                     <img src="assets/images/screen-3/cloud-behind.png" class="prop position-absolute clouds  customHide behind-cloud" height="363" width="auto" alt="">
