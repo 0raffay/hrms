@@ -54,7 +54,7 @@
                 <div class="container">
                     <div class="row justify-content-center justify-content-lg-end">
                         <div class="col-lg-6 text-right">
-                            <button id="change" class="btn bg-blue-700 fc-white">Change Screen</button>
+                            <!-- <button id="change" class="btn bg-blue-700 fc-white">Change Screen</button> -->
                         </div>
                         <div class="col-lg-6 col-md-12">
                             <div class="formMain">

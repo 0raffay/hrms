@@ -893,8 +893,9 @@ label {
     z-index: 3;
 }
 
+.showPassButton:hover,
 .showPassButton:focus {
-    outline: 1px solid var(--clr-purple-700);
+    outline: 1px solid var( --clr-blue-300);
 }
 
 .showPassButton.active .open,

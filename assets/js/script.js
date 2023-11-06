@@ -80,14 +80,10 @@ function validateForm(options, action) {
         function checkIfSpecialFields(input) {
             inputValidationType = input.attr("validation");
             emailValidationType = email.attr("validation");
-            // telephoneValidationType = telephone.attr("validation");
 
             if (inputValidationType == emailValidationType) {
                 isSpecial = true;
                 validateSpecialFields(email, emailRegex);
-                // } else if (inputValidationType == telephoneValidationType) {
-                //     isSpecial = true;
-                //     validateSpecialFields(telephone, telephoneRegex);
             } else {
                 isSpecial = false;
             }
@@ -198,10 +194,10 @@ function formInputHandler() {
         }
     });
 }
-$("#change").click(function () {
-    let screenItems = $(".screenBasic");
-    let activeIndex = screenItems.index($(".screenBasic.active"));
-    screenItems.eq(activeIndex).removeClass("active");
-    activeIndex = (activeIndex + 1) % screenItems.length;
-    screenItems.eq(activeIndex).addClass("active");
-});
+// $("#change").click(function () {
+//     let screenItems = $(".screenBasic");
+//     let activeIndex = screenItems.index($(".screenBasic.active"));
+//     screenItems.eq(activeIndex).removeClass("active");
+//     activeIndex = (activeIndex + 1) % screenItems.length;
+//     screenItems.eq(activeIndex).addClass("active");
+// });
