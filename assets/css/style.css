@@ -805,7 +805,8 @@ label {
 
     display: none;
 
-    background: linear-gradient(45deg, #333, #666); ;
+    background: linear-gradient(45deg, #333, #666);
+    ;
 }
 
 
@@ -1237,6 +1238,11 @@ input.error~.inputFocusLine {
     background: #C00;
 }
 
+.screen-4.error-screen.superActive {
+    opacity: 1 !important;
+    z-index: 1 !important;
+}
+
 .error-text h3 {
     font-size: 100px;
     letter-spacing: 18px;
@@ -1329,6 +1335,19 @@ input.error~.inputFocusLine {
 
 /* ROTATING CIRCLES */
 
-.fp-watermark{
-    display: none !important;   
+.fp-watermark {
+    display: none !important;
+}
+
+
+.screen-3 .rocketImage.mobile-rocket {
+    left: 0;
+    bottom: 0;
+    top: unset;
+    z-index: 4;
+}
+
+.mobile-left {
+    left: 0;
+    bottom: 0;
 }

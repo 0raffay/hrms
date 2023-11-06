@@ -10,38 +10,37 @@ $(document).ready(function () {
         },
         function () {
             let timing = 1000;
-    
-            // Initially, hide the mainFormButton and show the loadingFormButton
             $(".mainFormButton").addClass("hide");
             $(".loadingFormButton").removeClass("hide");
-    
-            // After a delay, hide the loadingFormButton and show the doneFormButton
             setTimeout(function () {
                 $(".loadingFormButton").addClass("hide");
                 $(".doneFormButton").removeClass("hide");
             }, timing * 2);
-    
-            // Add a delay before changing the screen states and animating the rocketImage
             setTimeout(function () {
-                // Change the screen states
                 $(".screenBasic").removeClass("active");
+                $(".error-screen").removeClass("superActive");
                 $(".loader-screen").addClass("active");
     
                 setTimeout(function () {
                     const rocket = document.getElementById("rocketImage");
-    
-                    // Use GSAP to animate the rocket
                     gsap.to(rocket, {
                         x: 1920, 
                         y: -600, 
-                        duration: 3, // Animation duration in seconds
+                        duration: 3,
                         ease: Power4.easeOut,
                     });
-                }, 500); // 4 seconds delay
+                    const rocket2 = document.getElementById("rocketImage2");
+                    gsap.to(rocket2, {
+                        x: 1920, 
+                        y: -400, 
+                        duration: 3,
+                        ease: Power4.easeOut,
+                    });
+                }, 500); 
             }, timing);
-    
-    
-            // Add a delay before showing the doneFormButton
+
+
+            // HANDLE FORM SUBMIT HERE:
             setTimeout(function () {
                 $(".doneFormButton").removeClass("hide");
                 window.location.href = window.location.href;
@@ -63,19 +62,15 @@ function validateForm(options, action) {
         options.email.regex ||
         /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
-    // let telephone = $(options.telephone.selector);
-    // let telephoneRegex = options.telephone.regex || /^\d{3}-\d{3}-\d{4}$/;
 
     let checkValidateType = {
         inputs: "empty",
         email: "email",
-        // telephone: "telephone",
     };
 
     function addUtilties() {
         inputs.attr("validation", checkValidateType.inputs);
         email.attr("validation", checkValidateType.email);
-        // telephone.attr("validation", checkValidateType.telephone);
     }
     addUtilties();
 
@@ -156,59 +151,12 @@ function validateForm(options, action) {
         } else {
             $(this).addClass(disableClass);
             $(".screenBasic").removeClass("active");
-            $(".error-screen").addClass("active");
+            $(".error-screen").addClass("superActive");
 
         }
     });
 }
 
-function tabbing(
-    buttonClassByContainer,
-    panelClassByContainer,
-    utilityClassToAdd
-) {
-    let activeClass = utilityClassToAdd ? utilityClassToAdd : "active";
-    let buttons = $(buttonClassByContainer);
-    let panels = $(panelClassByContainer);
-
-    panels.not(panels.eq(0)).hide();
-
-    buttons.click(function () {
-        let itsIndex = $(this).index();
-        if (panels.eq(itsIndex).length != 0) {
-            buttons.removeClass(activeClass);
-            $(this).addClass(activeClass);
-            panels.hide();
-            panels.eq(itsIndex).show().addClass(activeClass);
-        } else {
-            $(this).addClass("disabled");
-        }
-    });
-}
-
-function toggler(options) {
-    const button = $(options.button);
-    const action = $(options.actionContainer);
-    const classToAdd = options.actionClass || "active";
-
-    if (options.removeAction) {
-        let _eventTrigger = $(options.removeAction.eventTrigger);
-        let event = options.removeAction.event;
-
-        _eventTrigger.on(event, function () {
-            action.removeClass(classToAdd);
-        });
-    }
-
-    button.click(function (e) {
-        console.log("workign");
-        if (options.preventDefault) {
-            e.preventDefault();
-        }
-        button.toggleClass(classToAdd);
-        action.toggleClass(classToAdd);
-    });
-}
 
 function formInputHandler() {
     let inputs = $(".cus-inputs input");

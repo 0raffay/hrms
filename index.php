@@ -52,11 +52,11 @@
             <!-- ==== FORM START ==== -->
             <div class="formContainer">
                 <div class="container">
-                    <div class="row justify-content-end">
-                        <div class="col-lg-6 text-right">
+                    <div class="row justify-content-center justify-content-lg-end">
+                        <div class="col-lg-6 d-md-none text-right">
                             <button id="change" class="btn bg-blue-700 fc-white">Change Screen</button>
                         </div>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 col-md-12">
                             <div class="formMain">
                                 <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post">
                                     <div class="formHead">
@@ -87,8 +87,8 @@
                                     </div>
                                     <div class="formButtonContainer overflow-hidden">
                                         <button class="btn btn-blue btn-lg fc-white bg-blue-700 mainFormButton" form-submit>Login</button>
-                                        <button class="btn btn-blue btn-lg fc-white bg-pink-700 loadingFormButton hide">Loading</button>
-                                        <button class="btn btn-blue btn-lg gap-2 fc-white bg-purple-700 doneFormButton hide"><i class="ri-checkbox-circle-line fs-22 fw-400"></i>Login</button>
+                                        <button class="btn btn-blue btn-lg fc-white bg-pink-700 prevDef loadingFormButton hide">Loading</button>
+                                        <button class="btn btn-blue btn-lg gap-2 fc-white bg-purple-700 prevDef doneFormButton hide"><i class="ri-checkbox-circle-line fs-22 fw-400"></i>Login</button>
                                     </div>
                                 </form>
                                 <div class="form-seperator user-select-none d-flex justify-content-center align-items-center gap-10 my-3 fs-14 fw-500 fc-neutral-700">
@@ -125,8 +125,8 @@
 
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-6 col-sm-12">
-                                <div class="screen-1-text">
+                            <div class="col-lg-6 col-sm-12 customHide">
+                                <div class="screen-1-text ">
                                     <h3 class="screenHeading fs-45 mb-15 fc-white fw-800 lh-1-3">
                                         Stay Informed with <br>
                                         the Latest Features
@@ -170,7 +170,7 @@
 
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-6 col-sm-12">
+                            <div class="col-lg-6 col-sm-12 customHide ">
                                 <div class="screen-2-text">
                                     <h3 class="screenHeading fs-45 mb-15 fc-white fw-800 lh-1-3">
                                         Unlocking the <br>
@@ -227,17 +227,21 @@
             <!-- ==== SCREEN 3 LOADER START ==== -->
             <div class="screen-3 loader-screen screenBasic">
                 <div class="screenWrapper position-relative">
+                    <!-- MOBILE PROPS -->
+                    <img src="assets/images/screen-3/phone-left-prop.png" class="prop position-absolute mobile-left" alt="">
+                    <img src="assets/images/screen-3/phone-rocket-img.png" class="prop position-absolute mobile-rocket rocketImage d-lg-none d-block" id="rocketImage2" alt="">
+
                     <!-- MORE PROPS -->
-                    <img src="assets/images/screen-3/cloud-behind.png" class="prop position-absolute clouds behind-cloud" height="363" width="auto" alt="">
-                    <img src="assets/images/screen-3/forward-cloud.png" class="prop position-absolute clouds forward-cloud" height="282" width="auto" alt="">
-                    <img src="assets/images/screen-3/top-middle-prop.png" height="237" width="auto" alt="" class="prop position-absolute top-middle-prop">
-                    <img src="assets/images/screen-3/star-prop.png" alt="" class="prop position-absolute star-prop">
+                    <img src="assets/images/screen-3/cloud-behind.png" class="prop position-absolute clouds  customHide behind-cloud" height="363" width="auto" alt="">
+                    <img src="assets/images/screen-3/forward-cloud.png" class="prop position-absolute clouds  customHide forward-cloud" height="282" width="auto" alt="">
+                    <img src="assets/images/screen-3/top-middle-prop.png" height="237" width="auto" alt="" class="prop customHide position-absolute top-middle-prop">
+                    <img src="assets/images/screen-3/star-prop.png" alt="" class="prop position-absolute customHide star-prop">
                     <img src="assets/images/screen-3/top-right-side.png" alt="" class="prop position-absolute top-right" width="224" height="216">
 
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-6 col-sm-12">
-                                <div class="screen-3-text pt-5">
+                            <div class="col-lg-6 col-sm-12 customHide">
+                                <div class="screen-3-text pt-5 ">
                                     <h3 class="screenHeading fs-45 mb-15 fc-white fw-800 lh-1-3">
                                         USweet perks and even sweeter discounts.
                                     </h3>
@@ -251,7 +255,7 @@
                             </div>
                             <div class="col-lg-6 col-sm-12 position-relative">
                                 <!-- Form Prop -->
-                                <img src="assets/images/screen-3/form-left-prop.png" height="145" width="145" alt="" class="prop form-top-left position-absolute">
+                                <img src="assets/images/screen-3/form-left-prop.png" height="145" width="145" alt="" class="prop customHide form-top-left position-absolute">
                             </div>
                         </div>
                     </div>
@@ -261,7 +265,7 @@
 
             <!-- ==== SCREEN 4 ERROR START ==== -->
             <div class="screen-4  error-screen screenBasic">
-                <div class="screenWrapper position-relative">
+                <div class="screenWrapper customHide position-relative">
                     <!-- MORE PROPS -->
                     <img src="assets/images/screen-4/top-left-side.png" class="prop position-absolute top-left" alt="">
                     <img src="assets/images/screen-4/top-right-side.png" class="prop position-absolute top-right" alt="">

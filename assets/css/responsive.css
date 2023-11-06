@@ -130,9 +130,9 @@
 
 @media only screen and (max-width: 992px) {
 
-    /* HIDING SCREENS */
-    .screenBasic {
-        display: none;
+    /* HIDING SCREENS NON-IMPORTANTS */
+    .customHide {
+        display: none !important;
     }
 
     #main {
@@ -151,9 +151,26 @@
     .dot {
         bottom: 20px;
     }
+
+    .screen-2 .form-prop {
+        left: 60px;
+        bottom: -364px
+    }
+
+    .screen-2 .bottom-left {
+        left: -10px;
+        bottom: 30px;
+        scale: .7;
+    }
 }
 
 @media only screen and (max-width: 767px) {
+    .screen-2 .form-prop {
+        left: -39px
+        ;
+        top: -332px;
+    }
+
     .span-two {
         grid-column: span 1;
     }
@@ -195,8 +212,21 @@
         height: 20px;
         width: 20px;
     }
+
+    .formMain {
+        padding-inline: 22px;
+        padding-block: 28px;
+    }
+
+    .cus-inputs .floating-label {
+        font-size: 14px;
+    }
 }
 
-@media only screen and (max-width: 560px) {}
+@media only screen and (max-width: 560px) {
+    .screen-2 .form-prop {
+        display: none;
+    }
+}
 
 @media only screen and (max-width: 480px) {}

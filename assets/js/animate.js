@@ -6,7 +6,6 @@ const introTimeline = gsap.timeline({
         var myFullpage = new fullpage("#fullpage", {
             scrollingSpeed: 700,
         });
-        
     },
 });
 
@@ -68,7 +67,6 @@ introTimeline.to(".scrollButtonWrapper", {
     y: 20,
 });
 
-
 introTimeline.to("#main", {
     display: "flex",
     delay: 0,
@@ -93,6 +91,8 @@ sc1.from(".mainImg", {
     y: -30,
     duration: 1,
 });
+
+sc1.to({}, { duration: 1.5 });
 
 sc1.from(".secondImg img", {
     opacity: 0,
@@ -119,6 +119,8 @@ sc1.from(".fifthImage img", {
     y: 20,
     duration: 0.5,
 });
+
+sc1.to({}, { duration: 1.5 });
 
 const sc2 = gsap.timeline({
     paused: true,
@@ -165,7 +167,7 @@ function cardsBackAnimation(selector) {
 
 function cardsFrontAnimation(selector) {
     sc2.from(selector, {
-        opacity: 0.5,
+        opacity: 0.3,
         x: -20,
         y: 100,
         rotate: 2,
@@ -177,6 +179,7 @@ function cardsFrontAnimation(selector) {
 }
 
 // FIRST CARD
+sc2.to({}, { duration: 0.6 });
 showCard(".card-pink");
 cardsBackAnimation(".card-pink .cards-back");
 cardsFrontAnimation(".card-pink .cards-front");
@@ -233,13 +236,26 @@ for (let i = numCircles; i >= 1; i--) {
 }
 
 //RANDOM MOVING OBJECTS:
-var tl = gsap.timeline().to(".randomMovement", {
+var randomMovementSC1 = gsap.timeline().to(".randomMovement", {
     x: "random(-20, 20, 5)",
     y: "random(-20, 10, 3)",
     duration: 1,
     ease: "none",
     repeat: -1,
     repeatRefresh: true,
+});
+
+var randomMovementAstraunaut = gsap.timeline().to(".screen-4 .rocketMan", {
+    x: "random(-10, 10, 5)",
+    y: "random(-10, 10, 3)",
+    duration: 1,
+    ease: "none",
+    repeat: -1,
+    repeatRefresh: true,
+});
+
+$(".prevDef").click(function (e) {
+    e.preventDefault();
 });
 
 
