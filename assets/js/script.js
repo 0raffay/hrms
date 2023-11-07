@@ -20,30 +20,32 @@ $(document).ready(function () {
                 $(".screenBasic").removeClass("active");
                 $(".error-screen").removeClass("superActive");
                 $(".loader-screen").addClass("active");
-    
+
                 setTimeout(function () {
                     const rocket = document.getElementById("rocketImage");
                     gsap.to(rocket, {
-                        x: 1920, 
-                        y: -600, 
+                        x: 1920,
+                        y: -600,
                         duration: 3,
                         ease: Power4.easeOut,
                     });
                     const rocket2 = document.getElementById("rocketImage2");
                     gsap.to(rocket2, {
-                        x: 500, 
-                        y: -400, 
+                        x: 500,
+                        y: -400,
                         duration: 3,
                         ease: Power4.easeOut,
                     });
-                }, 500); 
+                }, 500);
             }, timing);
 
-
-            // HANDLE FORM SUBMIT HERE:
             setTimeout(function () {
                 $(".doneFormButton").removeClass("hide");
+                // HANDLE FORM SUBMIT HERE:
                 window.location.href = window.location.href;
+                // HANDLE FORM SUBMIT HERE:
+
+
             }, timing * 3);
         }
     );
@@ -61,7 +63,6 @@ function validateForm(options, action) {
     let emailRegex =
         options.email.regex ||
         /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-
 
     let checkValidateType = {
         inputs: "empty",
@@ -148,11 +149,9 @@ function validateForm(options, action) {
             $(this).addClass(disableClass);
             $(".screenBasic").removeClass("active");
             $(".error-screen").addClass("superActive");
-
         }
     });
 }
-
 
 function formInputHandler() {
     let inputs = $(".cus-inputs input");

@@ -1,6 +1,12 @@
 /**--- OTHER CSS INCLUDE ---*/
 @import url(libs.css);
 @import url(variables.css);
+
+@font-face {
+    font-family: Axiforma, sans-serif;
+    src: url(../fonts/AxiformaRegular.otf) format('opentype');
+}
+
 /**--- OTHER CSS INCLUDE ---*/
 
 
@@ -895,7 +901,7 @@ label {
 
 .showPassButton:hover,
 .showPassButton:focus {
-    outline: 1px solid var( --clr-blue-300);
+    outline: 1px solid var(--clr-blue-300);
 }
 
 .showPassButton.active .open,

@@ -34,7 +34,7 @@
         letter-spacing: 10px;
     }
 
-    .screen-4-text  .screenSubHeading {
+    .screen-4-text .screenSubHeading {
         font-size: 22px;
     }
 }
@@ -76,7 +76,7 @@
 }
 
 @media only screen and (max-width: 1250px) {
-    .screen-4-text  {
+    .screen-4-text {
         padding-left: 20px;
     }
 
@@ -170,8 +170,7 @@
 
 @media only screen and (max-width: 767px) {
     .screen-2 .form-prop {
-        left: -39px
-        ;
+        left: -39px;
         top: -332px;
     }
 
@@ -238,4 +237,30 @@
     }
 }
 
-@media only screen and (max-width: 480px) {}
+@media only screen and (max-width: 480px) {
+
+    .screen-2 .middle-prop-right {
+        bottom: 5px;
+        right: 10px;
+    }
+
+    .screen-2 .bottom-left {
+        left: 0;
+        bottom: 5px;
+    }
+
+    .screen-2 .middle-prop-left {
+        top: 6px;
+        left: 11px;
+    }
+
+    .screen-2 .top-right {
+        height: 91px;
+        width: 90px;
+    }
+
+    .screen-2 .form-top-prop {
+        display: none;
+    }
+
+}

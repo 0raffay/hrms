@@ -1,7 +1,4 @@
-@font-face {
-    font-family: Axiforma, sans-serif;
-    src: url(../fonts/AxiformaRegular.otf);
-}
+
 
 :root {
     --ff-primary: Axiforma, sans-serif;
