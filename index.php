@@ -13,7 +13,9 @@
 
     <!--==== HEADER STYLES START ====-->
     <?php include('includes/header-styles.php') ?>
+    <link rel="stylesheet" href="assets/css/login.css">
     <!--==== HEADER STYLES END ====-->
+    
     <title>Login | <?php echo $siteName; ?></title>
 </head>
 
@@ -106,7 +108,7 @@
                                         Sign in with Apple ID
                                     </button>
                                 </div>
-                                <p class="fs-12 fw-400 text-center">Need to create an account? <a href="" class="text-decoration-none fc-blue-300 fw-600">Sign Up</a></p>
+                                <p class="fs-12 fw-400 text-center">Need to create an account? <a href="signup.php" class="text-decoration-none fc-blue-300 fw-600">Sign Up</a></p>
                             </div>
                         </div>
                     </div>
@@ -307,6 +309,8 @@
     <!--==== FOOTER START ====-->
     <?php include('includes/footer.php') ?>
     <!--==== FOOTER END ====-->
+
+    <link rel="stylesheet" href="assets/js/login.js">
 </body>
 
 </html>

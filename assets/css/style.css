@@ -1,12 +1,6 @@
 /**--- OTHER CSS INCLUDE ---*/
 @import url(libs.css);
 @import url(variables.css);
-
-/* @font-face {
-    font-family: Axiforma, sans-serif;
-    src: url(../fonts/AxiformaRegular.otf) format('opentype');
-} */
-
 /**--- OTHER CSS INCLUDE ---*/
 
 
@@ -222,16 +216,16 @@ label {
 .input__wrap {
     margin: var(--input-wrap-margin);
 
-    --input-height: 55px;
-    --input-bd-radius: 3px;
+    --input-height: 50px;
+    --input-bd-radius: 10px;
 
     --input-placeholder-color: #000;
-    --input-color: var(--clr-primary);
-    --input-bd: none;
-    --input-bg: transparent;
+    --input-color: #000;
+    --input-bd: 1px solid #D9D9D9;
+    --input-bg: #FAFBFC;
     --input-line-height: 1.2;
 
-    --input-focus-outline: 1px solid red;
+    --input-focus-outline: 1px solid var(--clr-pink-700);
 
     --input-padding: 10px;
     --input-width: 100%;
@@ -241,12 +235,12 @@ label {
     --text-area-height: 181px;
 
 
-    --label-fs: var(--fs-18);
-    --label-color: #000;
-    --label-fw: 400;
+    --label-fs: var(--fs-16);
+    --label-color: #475E6F;
+    --label-fw: 600;
     --label-mb: 10px;
     --label-display: block;
-    --label-line-height: 1.2;
+    --label-line-height: normal
 }
 
 
@@ -262,6 +256,7 @@ label {
     display: var(--input-display);
     color: var(--input-color);
     line-height: var(--input-line-height);
+    padding-left: 15px;
 }
 
 .input__wrap input:focus,
@@ -422,13 +417,6 @@ label {
     max-width: 100%;
 }
 
-/* 
-.btn-primary:focus,
-.btn-primary {
-    color: var(--fc-accent);
-    background: var(--clr-primary);
-} */
-
 .btn:focus {
     outline: none;
     box-shadow: none;
@@ -556,6 +544,10 @@ label {
     color: #4E9CEF;
 }
 
+.fc-blue-500 {
+    color: var(--clr-blue-500);
+}
+
 .fc-white {
     color: #FFF;
 }
@@ -578,6 +570,14 @@ label {
 
 .fc-neutral-700 {
     color: var(--clr-neutral-700);
+}
+
+.fc-subbed-400 {
+    color: #7E8F90;
+}
+
+.fc-subbed-700 {
+    color: #475E6F;
 }
 
 /* FONT COLORS END */
@@ -726,640 +726,4 @@ label {
     100% {
         background-position: 0% 50%;
     }
-}
-
-/**--- SCREEN 1 START ---*/
-#introMain {
-    --bg-size: 150%;
-    background: linear-gradient(65deg, #9ECCF6, #F5A571, #CD8CED, #F273C0);
-    background-size: var(--bg-size) var(--bg-size);
-    animation: gradient 5s ease infinite;
-
-    height: 100vh;
-    width: 100%;
-    /* position: fixed;
-    inset: 0;
-    z-index: 4; */
-}
-
-
-.introHeadingContainer {
-    max-width: 761px;
-    width: 100%;
-    margin-inline: auto;
-}
-
-.introHeading {
-    font-size: 120px;
-    line-height: 1.1;
-    font-weight: 900;
-    position: relative;
-}
-
-.dot {
-    width: 32px;
-    height: 32px;
-    background: #7113A0;
-    border-radius: 100%;
-    display: block;
-    position: absolute;
-    right: 15px;
-    bottom: 40px;
-}
-
-.scrollButtonWrapper {
-    position: absolute;
-    bottom: 40px;
-    cursor: pointer;
-}
-
-.introScrollDownButton {
-    width: 22px;
-    height: 39px;
-    margin: 0 auto;
-
-    position: relative;
-    background: transparent;
-}
-
-.scrollButtonStroke {
-    background: transparent;
-    border: 1px solid #FFF;
-    width: 100%;
-    height: 100%;
-    border-radius: 13px;
-}
-
-.scrollButtonDot {
-    border-radius: 100%;
-    height: 15px;
-    width: 15px;
-    background-color: #7113A0;
-
-    position: absolute;
-    bottom: 3px;
-    left: 4px;
-}
-
-/**--- SCREEN 1 END ---*/
-
-/**--- SETTING BASIC FORM START ---*/
-#main {
-    min-height: 100vh;
-    width: 100%;
-    position: relative;
-
-    display: none;
-
-    background: linear-gradient(45deg, #333, #666);
-    ;
-}
-
-
-.formContainer {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-    right: 0;
-    z-index: 2;
-}
-
-#main>* {
-    width: 100%;
-}
-
-.formMain {
-    margin-inline: auto;
-    padding-block: 33px;
-    padding-inline: 40px;
-    max-width: 454px;
-    width: 100%;
-    border-radius: 10px;
-    border: 1px solid #DDDDDF;
-    background: #FFF;
-    box-shadow: 0px 4px 4px 0px rgba(171, 162, 162, 0.25);
-}
-
-/* inputs */
-.inputFocusLine {
-    border-radius: 0px 0px 2.5px 2.5px;
-    background: var(--clr-blue-700);
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 3px;
-    left: 0;
-    right: 0;
-    z-index: 3;
-}
-
-.cus-inputs {
-    position: relative;
-    overflow: hidden;
-    border-radius: 4px;
-    background: #F2F2F2;
-
-    --x-controller: 20px;
-}
-
-.cus-inputs input {
-    padding-left: var(--x-controller);
-    min-height: 58px;
-    width: 100%;
-    border-radius: 4px;
-    outline: none;
-    border: none;
-    background: transparent;
-    font-size: 15px;
-    line-height: normal;
-    position: relative;
-    z-index: 2;
-}
-
-.cus-inputs .floating-label {
-    position: absolute;
-    top: 18px;
-}
-
-.showPassButton {
-    right: var(--x-controller);
-    width: 36px;
-    height: 36px;
-    background: #FFF;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 100%;
-
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    z-index: 3;
-}
-
-.showPassButton:hover,
-.showPassButton:focus {
-    outline: 1px solid var(--clr-blue-300);
-}
-
-.showPassButton.active .open,
-.showPassButton .close {
-    display: none;
-}
-
-.showPassButton.active .close {
-    display: block;
-}
-
-.showPassButton i {
-    color: var(--clr-purple-700);
-}
-
-.cus-inputs .floating-label {
-    z-index: 2;
-    color: var(--clr-neutral-400);
-    left: var(--x-controller);
-
-    transition: all 100ms ease;
-}
-
-/* hover */
-input.hasText {
-    padding-top: 7px;
-}
-
-input.hasText+label.floating-label {
-    color: var(--clr-purple-700);
-    top: 3px;
-    font-size: 12px;
-}
-
-input.hasText~.inputFocusLine {
-    background: var(--clr-purple-700);
-}
-
-
-/* ERROR */
-input.error+label.floating-label {
-    color: crimson;
-}
-
-input.error~.inputFocusLine {
-    background: crimson;
-}
-
-/* password animaiton */
-.passwordAnimation {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: var(--x-controller);
-    height: 20px;
-    width: 20px;
-    background: #FFF;
-    border-radius: 100%;
-    z-index: 1;
-    transition: all 300ms ease-in;
-}
-
-.cus-inputs.active .passwordAnimation {
-    transform: scale(50);
-}
-
-/* inputs */
-
-.rememberMe * {
-    cursor: pointer;
-}
-
-.rememberMe .form-check-input:checked {
-    border-color: #fff;
-    background-color: var(--clr-purple-700);
-}
-
-.rememberMe .form-check-input:focus {
-    border-color: none;
-    outline: 0;
-    box-shadow: none;
-}
-
-
-.form-seperator {
-    cursor: default;
-}
-
-.form-seperator .line {
-    background-color: #7C828D;
-    border: 1px solid #DDDDDF;
-    height: 1px;
-    max-width: 140px;
-    width: 100%;
-}
-
-.otherLoginButtons button {
-    padding: 10px 0;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    border-radius: 8px;
-    border: 1px solid #DDDDDF;
-    transition: all 100ms ease;
-}
-
-.otherLoginButtons button:focus,
-.otherLoginButtons button:hover {
-    background: #eeeeee;
-}
-
-.formButtonContainer button.hide {
-    position: absolute;
-    opacity: 0;
-    transform: translateY(-100%);
-}
-
-.formButtonContainer button {
-    transition: transform 250ms ease;
-}
-
-/**--- SETTING BASIC FORM END ---*/
-
-/**--- SCREEN 1 START ---*/
-.screenBasic {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    opacity: 0;
-    transition: all 250ms ease;
-    z-index: -1;
-    overflow: hidden;
-
-    transition: opacity 250ms ease-in-out;
-}
-
-.screenWrapper {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-}
-
-.screenBasic.active {
-    z-index: 1;
-    opacity: 1;
-}
-
-.screen-1 {
-    background: linear-gradient(180deg, #15357A 0%, #214FB1 100%);
-}
-
-.screen-1-img .img-middle-left {
-    left: -42px;
-    top: 27%;
-}
-
-.screen-1-img .img-middle-right {
-    bottom: 28%;
-    right: 33%;
-}
-
-.screen-1-img .img-bottom-right {
-    bottom: -4%;
-    right: 42%;
-}
-
-.screen-1-img .img-bottom-left {
-    left: -70px;
-    bottom: 5%;
-}
-
-/**--- SCREEN 1 END ---*/
-
-
-/**--- SCREEN 2 START ---*/
-.screen-2 {
-    background: linear-gradient(0deg, #530B77 0%, #530B77 100%);
-}
-
-.cardsContainer {
-    min-height: 409px;
-}
-
-.screen-2-cards {
-    max-width: 402.474px;
-    width: 100%;
-    position: relative;
-}
-
-.screen-2-cards .cards-front {
-    border-radius: 40px;
-}
-
-.cards-back {
-    position: absolute;
-    width: 97%;
-    height: 100%;
-    inset: 0;
-    border-radius: 40px;
-    transform: rotate(-7deg) translateX(-13px) translateY(-32px);
-    z-index: -1;
-}
-
-.card-pink .cards-front {
-    background-color: #F53ED6;
-}
-
-.card-pink .cards-back {
-    background-color: #FDA2ED;
-}
-
-.card-light-blue .cards-front {
-    background: linear-gradient(180deg, #4E9CEF 0%, #427FBF 100%);
-}
-
-.card-light-blue .cards-back {
-    background: rgba(78, 156, 239, 0.30);
-}
-
-.card-dark-blue .cards-front {
-    background: linear-gradient(180deg, #3759A5 0%, #2B447B 100%);
-}
-
-.card-dark-blue .cards-back {
-    background: #80A3EF;
-}
-
-.card-purple .cards-front {
-    background: #B549ED;
-}
-
-.card-purple .cards-back {
-    background: #DCC0EB;
-}
-
-.screen-2-cards:not(.active) {
-    display: none;
-}
-
-.screen-2 .form-prop {
-    left: 29px;
-    bottom: -26px;
-}
-
-.screen-2 .middle {
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.screen-2 .middle-prop-right {
-    right: 60px;
-    rotate: 45deg;
-    animation: rotating-circles 5s linear infinite;
-}
-
-.screen-2 .middle-prop-left {
-    left: 60px;
-    animation: rotating-circles 5s linear infinite;
-}
-
-.screen-2 .top-right {
-    top: 0;
-    right: 0;
-}
-
-.screen-2 .form-top-prop {
-    top: -60px;
-    left: 21%;
-    height: 30px;
-    width: 30px;
-}
-
-.screen-2 .bottom-left {
-    left: 30px;
-    bottom: 30px;
-}
-
-/**--- SCREEN 2 END ---*/
-
-/**--- SCREEN 3 START ---*/
-.screen-3 {
-    background: linear-gradient(125deg, #39296C 0%, #2B1B4F 100%);
-}
-
-.screen-3 .form-top-left {
-    left: 42px;
-    top: 0px;
-}
-
-.screen-3 .clouds {
-    bottom: 0;
-    right: 0;
-}
-
-.screen-3 .behind-cloud {
-    width: 100%;
-}
-
-.screen-3 .top-middle-prop {
-    top: -46px;
-    display: block;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-}
-
-.screen-3 .rocketImageContainer {
-    min-height: 417px;
-}
-
-.screen-3 .rocketImage {
-    position: absolute;
-    left: -110px;
-    top: -69px;
-    transition: all 500ms ease;
-    z-index: 5;
-}
-
-.animate {
-    transform: translateX(50%);
-}
-
-.screen-3 .star-prop {
-    bottom: 150px;
-    left: 45%;
-    transform: translateX(-50%);
-}
-
-.screen-3 .top-right {
-    top: 20px;
-    right: 20px;
-}
-
-/**--- SCREEN 3 END ---*/
-
-
-/**--- SCREEN 4 / ERROR START ---*/
-.screen-4.error-screen {
-    background: #C00;
-}
-
-.screen-4.error-screen.superActive {
-    opacity: 1 !important;
-    z-index: 1 !important;
-}
-
-.error-text h3 {
-    font-size: 100px;
-    letter-spacing: 18px;
-}
-
-.screen-4 .top-left {
-    top: 0;
-    left: 0;
-}
-
-.screen-4 .top-right {
-    right: 0;
-    top: 0;
-}
-
-.screen-4 .bottom-right {
-    right: 0;
-    bottom: 0;
-}
-
-.screen-4 .rocketImage {
-    bottom: 0;
-    left: 0;
-    z-index: 2;
-}
-
-.screen-4 .rope {
-    left: 136px;
-    bottom: 250px;
-}
-
-.screen-4 .rocketMan {
-    top: 6%;
-    left: 7%;
-}
-
-/**--- SCREEN 4 / ERROR END ---*/
-
-
-/**--- ANIMATION CSS START ---*/
-
-
-.introLoader {
-    display: block;
-    opacity: 0;
-    scale: .7;
-    transform: translateY(-20px);
-}
-
-.scrollButtonWrapper {
-    opacity: 0;
-}
-
-
-.introHeadingContainer {
-    display: none;
-    opacity: 1;
-}
-
-.dot {
-    opacity: 0;
-}
-
-.opacity-0 {
-    opacity: 0;
-}
-
-/**--- ANIMATION CSS END ---*/
-/* ROTATING CIRCLES */
-@keyframes rotating-circles {
-    0% {
-        transform: rotate(0);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-
-#rotatingCircles {
-    animation: rotating-circles 10s linear infinite;
-}
-
-.circle_container {
-    position: absolute;
-    top: -1060px;
-    left: -1070px;
-}
-
-/* ROTATING CIRCLES */
-
-.fp-watermark {
-    display: none !important;
-}
-
-
-.mobile-rocket {
-    left: 0;
-    bottom: 0;
-    top: unset;
-    z-index: 4;
-}
-
-.mobile-left {
-    left: 0;
-    bottom: 0;
-    z-index: 2;
-}
-
-.mobileProps {
-    display: none;
 }
