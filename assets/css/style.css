@@ -2,10 +2,10 @@
 @import url(libs.css);
 @import url(variables.css);
 
-@font-face {
+/* @font-face {
     font-family: Axiforma, sans-serif;
     src: url(../fonts/AxiformaRegular.otf) format('opentype');
-}
+} */
 
 /**--- OTHER CSS INCLUDE ---*/
 
