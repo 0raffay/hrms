@@ -12,10 +12,12 @@
 
 
     <!--==== HEADER STYLES START ====-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.css" integrity="sha512-wCVOuVtxsXqrQK7tj9j4BvyfITQmpp7UE7mVilD7aieGLYFEIAa5UKTP1RapOf6dxQ9JIKAneakcyykWG4r4Ow==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <?php include('includes/header-styles.php') ?>
     <link rel="stylesheet" href="assets/css/login.css">
     <!--==== HEADER STYLES END ====-->
-    
+
     <title>Login | <?php echo $siteName; ?></title>
 </head>
 
@@ -108,7 +110,7 @@
                                         Sign in with Apple ID
                                     </button>
                                 </div>
-                                <p class="fs-12 fw-400 text-center">Need to create an account? <a href="signup.php" class="text-decoration-none fc-blue-300 fw-600">Sign Up</a></p>
+                                <p class="fs-12 fw-400 text-center">Need to create an account? <a aria-label="Create and account by signing up." href="signup.php" class="text-decoration-none fc-blue-300 fw-600">Sign Up</a></p>
                             </div>
                         </div>
                     </div>
@@ -281,7 +283,7 @@
                     <img alt="Reload Page" src="assets/images/screen-4/rope-prop.png" height="504" width="622" class="prop position-absolute rope">
 
                     <!-- ASTRONAUT -->
-                    <img alt="Reload Page" src="assets/images/screen-4/astronaut.png"  width="492" height="280" class="prop position-absolute rocketMan">
+                    <img alt="Reload Page" src="assets/images/screen-4/astronaut.png" width="492" height="280" class="prop position-absolute rocketMan">
 
                     <div class="container">
                         <div class="row">
@@ -309,8 +311,9 @@
     <!--==== FOOTER START ====-->
     <?php include('includes/footer.php') ?>
     <!--==== FOOTER END ====-->
-
-    <link rel="stylesheet" href="assets/js/login.js">
+    <!-- EXTERNAL FILES -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.js" integrity="sha512-ekWIiATJSaL5RWmBSap8JDgTMCIBCso5UFovYoMix+a4qFcVDryBcCt4P0kJA4kA0YtmnJuzfTcmb9+TIznIlg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="assets/js/login.js"></script>
 </body>
 
 </html>

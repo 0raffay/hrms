@@ -77,7 +77,7 @@
                                         <div class="formBody mb-30">
                                             <div class="input__wrap mb-15">
                                                 <label for="email">Professional email</label>
-                                                <input type="email" data-validate id="email">
+                                                <input type="email" data-validate data-email id="email">
                                             </div>
                                             <div class="firstFormSecondPart">
                                                 <div class="input__wrap mb-15">
@@ -86,25 +86,25 @@
                                                 </div>
                                                 <div class="input__wrap mb-15">
                                                     <label for="companyName">Company name</label>
-                                                    <input type="text" data-validat id="companyName">
+                                                    <input type="text" data-validate id="companyName">
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-12 col-md-6 pe-1">
                                                         <div class="input__wrap mb-15">
                                                             <label for="noOfEmployees">No. of employees</label>
-                                                            <input type="text" id="noOfEmployees">
+                                                            <input type="number" inputmode="numeric" data-validate id="noOfEmployees">
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6 ps-1">
                                                         <div class="input__wrap mb-15">
                                                             <label for="companyPhone">Company phone</label>
-                                                            <input type="text" id="companyPhone">
+                                                            <input type="text" data-validate data-phone id="companyPhone">
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="input__wrap mb-15">
                                                     <label for="setPassword">Set password</label>
-                                                    <input type="password" id="setPassword">
+                                                    <input type="password" data-validate id="setPassword">
                                                 </div>
                                                 <div class="passwordStrength user-select-none pe-none mb-15">
                                                     <div class="progress">
@@ -133,10 +133,10 @@
                                                     </div>
                                                 </div>
                                                 <div class="input__wrap mb-0">
-                                                    <label for="password">Set password</label>
+                                                    <label for="password" >Set password</label>
                                                 </div>
                                                 <div class="input__wrap  position-relative">
-                                                    <input type="password" id="password">
+                                                    <input type="password" data-validate id="password">
                                                     <button class="showPass fs-14 fw-500 position-absolute top-50 translate-middle-y end-0 pe-3 mb-0">Show password</button>
                                                 </div>
                                             </div>
@@ -156,6 +156,9 @@
     <!--==== FOOTER START ====-->
     <?php include('includes/footer-scripts.php') ?>
     <!--==== FOOTER END ====-->
+
+    <script src="assets/js/signup.js"></script>
+
 </body>
 
 </html>
