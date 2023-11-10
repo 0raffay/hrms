@@ -27,7 +27,7 @@
 }
 
 main {
-    background: #242424;
+    background: #FDA2ED;
 }
 
 .screen {
@@ -61,7 +61,7 @@ main {
     z-index: 2;
 }
 
-.screen-1Form .formContainer {
+.formContainer {
     max-width: 703px;
     width: 100%;
     border-radius: 20px;
@@ -137,6 +137,11 @@ main {
     background: #F3F8F9;
 }
 
+.signupFormTestimonialSlider .slick-dots {
+    max-width: 497px;
+    width: 100%;
+}
+
 .showPass {
     transition: all 50ms ease;
 }
@@ -156,12 +161,13 @@ main {
     opacity: 0;
     display: none;
 }
+
 .switchingScreen {
     position: absolute;
     inset: 0;
 }
 
-.switchingScreen1{
+.blueScreen {
     background-color: #194BFB;
 }
 
@@ -169,4 +175,167 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.progress {
+    margin: 10px 0;
+}
+
+.custom-inputs {
+    position: relative;
+}
+
+
+.custom-inputs input {
+    padding-left: 70px;
+
+    border-radius: 10px;
+    border: 1px solid #D9D9D9;
+    background: #FFF;
+
+    padding-block: 20px;
+    transition: all 250ms ease;
+}
+
+.custom-inputs input::placeholder,
+.custom-inputs input {
+    color: #475E6F;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.custom-inputs input:focus, 
+.custom-inputs input:hover, 
+.custom-inputs input.hasText {
+    cursor: pointer;
+    filter: drop-shadow(0px 4px 4px rgba(154, 172, 236, 0.20));
+    outline: 1px solid #0436E7;
+    color: #292D34;
+}
+
+
+.custom-inputs .inputIcon {
+    position: absolute;
+    top: 50%;
+    left: 22px;
+    transform: translateY(-50%);
+    font-size: 35px;
+    color: rgb(78, 113, 187);
+    font-weight: 300;
+    z-index: 2;
+}
+
+.prop {
+    position: absolute;
+}
+
+.prop-bottom-left {
+    left: 0;
+    bottom: 0;
+}
+
+.form-side-prop {
+    left: 49%;
+    top: 0;
+}
+
+/* orangeScreen */
+.screenBackgrounds {
+    /* transform: translateX(-100%); */
+    transition: all 250ms ease;
+}
+.orangeScreen {
+    background: #F88B45;
+}
+/* 
+.screenBackgrounds.active {
+    transform: translateX(0);
+} */
+
+.pinkScreen {
+    background: #FE28A9;
+}
+
+.greenScreen {
+    background: url(../images/signup/green-screen/bg.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+@media only screen and (max-width: 1367px) {
+    .screenText h4 {
+        text-wrap: balance;
+        font-size: 37px;
+    }
+}
+
+@media only screen and (max-width: 1240px) {
+    .screenText h4 {
+        font-size: 30px;
+    }
+
+    .formContainer {
+        padding: 27px 22px;
+    }
+
+    .screen1List li {
+        font-size: 18px;
+    }
+
+    .otherLoginButtons button {
+        padding: 5px 0;
+        font-size: 14px;
+    }
+
+    .formHeader h5 {
+        font-size: 28px;
+    }
+
+    .input__wrap label {
+        font-size: 14px;
+    }
+
+    .input__wrap input,
+    .input__wrap select,
+    .input__wrap textarea {
+        font-size: 14px;
+        min-height: 40px;
+    }
+
+
+    .signUpTestiCard {
+        padding: 25px 20px 20px;
+    }
+}
+
+@media only screen and (max-width: 1140px) {
+    .screenText h4 {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    /* .screenText h4 {
+        margin: 0 auto;
+    } */
+
+    .screenText {
+        margin-bottom: 20px;
+    }
+
+    .signUpTestiCard {
+        margin: 0 auto;
+    }
+
+    .signupFormTestimonialSlider .slick-dots {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .signupFormTestimonialSlider {
+        display: none;
+    }
+
 }

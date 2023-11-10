@@ -129,17 +129,17 @@ label {
 }
 
 .slick-dots li button {
-    --_size: 16px;
+    --_size: 13px;
 
     display: block;
-    background: #D9D9D9;
+    background: #FFF;
 
     height: var(--_size);
     width: var(--_size);
 
     border-radius: 100%;
 
-    margin: 0 2px;
+    margin: 0 5px;
 
     padding: 0;
 
@@ -148,16 +148,17 @@ label {
 }
 
 .slick-dots li.slick-active button {
-    background: var(--clr-primary);
+    /* background: var(--clr-primary); */
+    background: #7113A0;
 }
 
-.slick-dots li.slick-active~li button {
+/* .slick-dots li.slick-active~li button {
     --_size: 14px;
 }
 
 .slick-dots li.slick-active~li:last-child button {
     --_size: 12px;
-}
+} */
 
 /* SLICK RESET */
 
@@ -238,7 +239,7 @@ label {
     --label-fs: var(--fs-16);
     --label-color: #475E6F;
     --label-fw: 600;
-    --label-mb: 10px;
+    --label-mb:  0 0 10px;
     --label-display: block;
     --label-line-height: normal
 }
@@ -415,6 +416,15 @@ label {
 .btn-lg {
     width: 100%;
     max-width: 100%;
+}
+
+.bor-clr-pink {
+    border: 1px solid var(--clr-pink-700);
+}
+
+.btn.bor-clr-pink:hover {
+    background: var(--clr-pink-700) !important;
+    color: #FFF;
 }
 
 .btn:focus {

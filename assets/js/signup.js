@@ -1,6 +1,8 @@
 $(document).ready(function () {
+    var screen1HideTimeline;
     check_password();
 
+    //SCREEN 1 FORM
     validateSignupForm(
         {
             button: "[data-sign-up]",
@@ -21,7 +23,7 @@ $(document).ready(function () {
                 $("#password").addClass("error");
                 $(".passError").show();
                 return;
-            }           
+            }
 
             $("#setPassword").removeClass("error");
 
@@ -29,8 +31,29 @@ $(document).ready(function () {
 
             $(".passError").hide();
 
-            let fadeinoutTimeline = fadeInOut(".screen-1", ".screen-2", 0.2);
-            fadeinoutTimeline.play();
+            screen1HideTimeline = fadeInOut(".screen-1", ".screen-2", 0.3);
+            screen1HideTimeline.play();
+            let swtich = switchScreens();
+            swtich.play();
+        }
+    );
+    formInputHandler();
+
+    let backButton = $("[data-go-to-sc1]");
+    backButton.click(function () {
+        screen1HideTimeline.reverse();
+       
+    });
+
+    validateUserInfoForm(
+        {
+            button: "[data-submit-user-info]",
+            inputs: "[data-validate-user]",
+            errorClass: "error",
+            disableClass: "disabled",
+        },
+        function () {
+            alert("nice");
         }
     );
 });
@@ -236,6 +259,12 @@ function validateSignupForm(options, action) {
                 $("[data-email]").addClass("error");
                 return;
             }
+            $(".signupFormTestimonialSlider").slick({
+                dots: true,
+                arrow: false,
+                slidesToShow: 1,
+                arrows: false,
+            });
             $(".onClickShow").slideDown();
             initalHit++;
         } else {
@@ -276,6 +305,132 @@ function fadeInOut(fadeOutElement, fadeInElement, duration) {
         duration: duration,
         opacity: 1,
     });
+
+    return timeline;
+}
+
+function formInputHandler() {
+    let inputs = $(".custom-inputs input");
+
+    function checkText(_this) {
+        let thisText = _this.val();
+        if (thisText !== "") {
+            _this.addClass("hasText");
+        } else {
+            _this.removeClass("hasText");
+        }
+    }
+
+    inputs.focus(function () {
+        checkText($(this));
+    });
+
+    inputs.blur(function () {
+        checkText($(this));
+    });
+
+    inputs.on("input", function () {
+        checkText($(this));
+    });
+
+    $(".showPassButton").click(function (e) {
+        e.preventDefault();
+        const passwordInput = $("input#password");
+        const parent = passwordInput.closest(".cus-inputs");
+        const isVisible = passwordInput.attr("type") === "text";
+        if (isVisible) {
+            passwordInput.attr("type", "password");
+            parent.removeClass("active");
+            $(this).removeClass("active");
+        } else {
+            passwordInput.attr("type", "text");
+            parent.addClass("active");
+            $(this).addClass("active");
+        }
+    });
+}
+
+function validateUserInfoForm(options, action) {
+    let errorClass = options.errorClass || "error";
+    let disableClass = options.disableClass || "disabled";
+
+    let isValid = false;
+    let button = $(options.button);
+    let inputs = $(options.inputs);
+
+    function checkInputs(_this) {
+        if (_this) {
+            if (_this.val() == "") {
+                _this.addClass(errorClass);
+            } else {
+                _this.removeClass(errorClass);
+            }
+        } else {
+            inputs.each(function () {
+                if ($(this).val() == "") {
+                    $(this).addClass(errorClass);
+                } else {
+                    $(this).removeClass(errorClass);
+                }
+            });
+        }
+    }
+
+    function checkErrorClass() {
+        isValid = inputs
+            .toArray()
+            .every((input) => !$(input).hasClass(errorClass));
+
+        if (isValid) {
+            button.removeClass(disableClass);
+        }
+    }
+
+    inputs.on("change", function () {
+        checkInputs($(this));
+        checkErrorClass();
+    });
+
+    button.on("click", function (e) {
+        e.preventDefault();
+        checkInputs();
+        checkErrorClass();
+
+        if (isValid) {
+            action();
+        } else {
+            $(this).addClass(disableClass);
+        }
+    });
+}
+
+// function switchScreens() {
+//     let len = $('.switchingScreen').length;
+//     let screenElements = $(".switchingScreen");
+
+//     for (let i = 0; i < len - 1; i++) {
+//         console.log("working");
+
+//         setTimeout(function () {
+//             console.log("working in timeout");
+//             screenElements.eq(i).removeClass("active");
+//             screenElements.eq(i + 1).addClass("active");
+//         }, i * 700);  // Adjust the delay based on the iteration
+//     }
+// }
+
+function switchScreens() {
+    let screenElements = $(".switchingScreen");
+    let len = screenElements.length;
+
+    let timeline = gsap.timeline();
+
+    for (let i = 0; i < len - 1; i++) {
+        timeline.to(screenElements[i], { x: "-100%", duration: 0.7, ease: "power2.inOut" }, i * 0.7);
+        timeline.set(screenElements[i], { display: "none" }, "+=0.7");
+    }
+
+    timeline.fromTo(screenElements[len - 1], { x: "100%", display: "block" }, { x: "0%", duration: 0.7, ease: "power2.inOut" }, len * 0.7);
 
     return timeline;
 }
