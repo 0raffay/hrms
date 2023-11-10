@@ -26,6 +26,9 @@
     background: #eeeeee;
 }
 
+main {
+    background: #242424;
+}
 
 .screen {
     min-height: 100vh;
@@ -118,10 +121,6 @@
     background-color: #02b502;
 }
 
-.firstFormSecondPart {
-    /* display: none; */
-}
-
 .starsForRating {
     color: #FBBE21;
 }
@@ -145,4 +144,29 @@
 .showPass.active,
 .showPass:hover {
     color: var(--clr-purple-700);
+}
+
+/* SWITCHING SCREENS */
+.screen-2Form {
+    position: relative;
+    z-index: 2;
+}
+
+.screen-2 {
+    opacity: 0;
+    display: none;
+}
+.switchingScreen {
+    position: absolute;
+    inset: 0;
+}
+
+.switchingScreen1{
+    background-color: #194BFB;
+}
+
+.switchingScreen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

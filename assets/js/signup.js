@@ -13,12 +13,24 @@ $(document).ready(function () {
             },
         },
         function () {
+            if (!$("#password-strength").hasClass("progress-bar-success")) {
+                $("#setPassword").addClass("error");
+                return;
+            }
             if ($("#password").val() !== $("#setPassword").val()) {
                 $("#password").addClass("error");
-            } else {
-                $("#password").removeClass("error");
-                alert("Nice form was submitted.");
-            }
+                $(".passError").show();
+                return;
+            }           
+
+            $("#setPassword").removeClass("error");
+
+            $("#password").removeClass("error");
+
+            $(".passError").hide();
+
+            let fadeinoutTimeline = fadeInOut(".screen-1", ".screen-2", 0.2);
+            fadeinoutTimeline.play();
         }
     );
 });
@@ -35,12 +47,12 @@ function check_password() {
 
     password.on("keyup", function () {
         let pass = $(this).val();
-        console.log(oneLetter);
         checkStrength(pass);
-    });
-
-    password.change(function () {
-        updateProgressBar(strength);
+        if (passwordStrength.hasClass("progress-bar-success")) {
+            password.removeClass("error");
+        } else {
+            password.addClass("error");
+        }
     });
 
     $("#password").on("change", function () {
@@ -89,10 +101,10 @@ function check_password() {
 
         if (passwordFieldType === "password") {
             passwordInput.attr("type", "text");
-            $(this).addClass('active');
+            $(this).addClass("active");
         } else {
             passwordInput.attr("type", "password");
-            $(this).removeClass('active');
+            $(this).removeClass("active");
         }
     });
 
@@ -102,25 +114,16 @@ function check_password() {
                 .removeClass("progress-bar-warning progress-bar-success")
                 .addClass("progress-bar-danger")
                 .css("width", "10%");
-            resultMessage.text("Weak Password");
         } else if (strength < 3) {
             passwordStrength
                 .removeClass("progress-bar-success progress-bar-danger")
                 .addClass("progress-bar-warning")
                 .css("width", "60%");
-            resultMessage.text("Medium Password");
         } else {
             passwordStrength
                 .removeClass("progress-bar-warning progress-bar-danger")
                 .addClass("progress-bar-success")
                 .css("width", "100%");
-            resultMessage.text("Strong Password");
-        }
-
-        if (!passwordStrength.hasClass("progress-bar-success")) {
-            password.addClass("error");
-        } else {
-            password.removeClass("error");
         }
     }
 }
@@ -246,4 +249,33 @@ function validateSignupForm(options, action) {
             }
         }
     });
+}
+
+function fadeInOut(fadeOutElement, fadeInElement, duration) {
+    let timeline = gsap.timeline();
+
+    timeline.to(fadeOutElement, {
+        opacity: 0,
+        duration: duration,
+        delay: 0,
+    });
+
+    timeline.to(fadeOutElement, {
+        display: "none",
+        duration: 0,
+        delay: 0,
+    });
+
+    timeline.to(fadeInElement, {
+        display: "block",
+        duration: 0,
+        delay: 0,
+    });
+
+    timeline.to(fadeInElement, {
+        duration: duration,
+        opacity: 1,
+    });
+
+    return timeline;
 }
