@@ -6,7 +6,7 @@ $(document).ready(function () {
             button: "[data-sign-up]",
             inputs: "[data-validate]",
             email: {
-                regex: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
+                selector: "[data-email]",
             },
             telephone: {
                 selector: "[data-phone]",
@@ -16,6 +16,7 @@ $(document).ready(function () {
             if ($("#password").val() !== $("#setPassword").val()) {
                 $("#password").addClass("error");
             } else {
+                $("#password").removeClass("error");
                 alert("Nice form was submitted.");
             }
         }
@@ -81,6 +82,20 @@ function check_password() {
         updateProgressBar(strength);
     }
 
+    $(".showPass").click(function (e) {
+        e.preventDefault();
+        var passwordInput = $("#password");
+        var passwordFieldType = passwordInput.attr("type");
+
+        if (passwordFieldType === "password") {
+            passwordInput.attr("type", "text");
+            $(this).addClass('active');
+        } else {
+            passwordInput.attr("type", "password");
+            $(this).removeClass('active');
+        }
+    });
+
     function updateProgressBar(strength) {
         if (strength < 2) {
             passwordStrength
@@ -111,6 +126,8 @@ function check_password() {
 }
 
 function validateSignupForm(options, action) {
+    let initalHit = 0;
+
     let errorClass = options.errorClass || "error";
     let disableClass = options.disableClass || "disabled";
 
@@ -208,13 +225,25 @@ function validateSignupForm(options, action) {
 
     button.on("click", function (e) {
         e.preventDefault();
-        checkInputs();
-        checkErrorClass();
 
-        if (isValid) {
-            action();
+        if (initalHit == 0) {
+            let regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            let emailValue = $("[data-email]").val();
+            if (!regex.test(emailValue) || emailValue === "") {
+                $("[data-email]").addClass("error");
+                return;
+            }
+            $(".onClickShow").slideDown();
+            initalHit++;
         } else {
-            $(this).addClass(disableClass);
+            checkInputs();
+            checkErrorClass();
+
+            if (isValid) {
+                action();
+            } else {
+                $(this).addClass(disableClass);
+            }
         }
     });
 }

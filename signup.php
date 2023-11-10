@@ -29,7 +29,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12 col-sm-12 col-md-6">
-                            <div class="d-flex flex-column justify-content-between">
+                            <div class="d-flex h-100 flex-column justify-content-between">
                                 <div class="screenText screen-1Text pt-md-5 mt-md-5 fc-white">
                                     <h4 class="fs-40 fw-700 lh-1-2 mb-30 w-75">With ResourcePad HR, you will be able to:</h4>
                                     <ul class="p-0  list-unstyled sc-1list">
@@ -48,8 +48,26 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="screenText screen-1Text-2 pb-md-5 mb-md-5 fc-white">
-
+                                <div class="screenText onClickShow screen-1Text-2 pb-md-5 mb-md-5 fc-white">
+                                    <h4 class="fs-40 fw-700 lh-1-2 mb-30 w-75">With ResourcePad HR, you will be able to:</h4>
+                                    <div class="sliderContainer">
+                                        <div class="signupFormTestimonialSlider">
+                                            <div class="item">
+                                                <div class="signUpTestiCard">
+                                                    <p class="mb-20 fs-16 text-center fc-subbed-700 fw-400">HRMS portal is a valuable tool for employees and HR professionals alike. It helps to automate tasks, improve communication, and provide a central hub for all HR-related data.</p>
+                                                    <div class="d-flex gap-1 justify-content-center align-items-center starsForRating mb-20">
+                                                        <i class="ri-star-fill"></i>
+                                                        <i class="ri-star-fill"></i>
+                                                        <i class="ri-star-fill"></i>
+                                                        <i class="ri-star-fill"></i>
+                                                        <i class="ri-star-fill"></i>
+                                                    </div>
+                                                    <h6 class="text-center fw-700 fc-neutral-700  fs-16 mb-0">Ahmed Raza</h6>
+                                                    <p class="text-center fc-subbed-700 fs-12 fw-400 mb-0">IT Software</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -79,7 +97,7 @@
                                                 <label for="email">Professional email</label>
                                                 <input type="email" data-validate data-email id="email">
                                             </div>
-                                            <div class="firstFormSecondPart">
+                                            <div class="firstFormSecondPart onClickShow">
                                                 <div class="input__wrap mb-15">
                                                     <label for="name">Full name</label>
                                                     <input type="text" data-validate id="name">
@@ -133,7 +151,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="input__wrap mb-0">
-                                                    <label for="password" >Set password</label>
+                                                    <label for="password">Set password</label>
                                                 </div>
                                                 <div class="input__wrap  position-relative">
                                                     <input type="password" data-validate id="password">
