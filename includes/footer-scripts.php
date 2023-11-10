@@ -12,8 +12,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/ScrollTrigger.min.js"></script>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.js" integrity="sha512-ekWIiATJSaL5RWmBSap8JDgTMCIBCso5UFovYoMix+a4qFcVDryBcCt4P0kJA4kA0YtmnJuzfTcmb9+TIznIlg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 <!--==== LOCAL FILES START =====-->
 <script src="assets/js/script.js"></script>
-<script src="assets/js/animate.js"></script>
 <!--==== LOCAL FILES END =====-->

@@ -1,3 +1,24 @@
+$(document).ready(function () {
+    check_password();
+    signUpFormValidation();
+
+    validateForm(
+        {
+            button: "[data-sign-up]",
+            inputs: "[data-validate]",
+            email: {
+                selector: "[data-email]",
+            },
+            telephone: {
+                selector: "[data-phone]"
+            }
+        },
+        function () {
+            alert("Nice form was submitted.");
+        }
+    );
+});
+
 //SIGN UP
 function check_password() {
     let password = $("#setPassword");
@@ -67,25 +88,4 @@ function check_password() {
         }
     }
 }
-check_password();
 
-let signUpCount = 0;
-$(["[data-sign-up]"]).click(function (e) {
-    e.preventDefault();
-    if (signUpCount == 0) {
-        $(".formContainer").slideDown();
-    } else {
-        validateForm(
-            {
-                button: "[data-sign-up]",
-                inputs: "[data-validate]",
-                email: {
-                    selector: "[data-email]",
-                },
-            },
-            function () {
-                alert("Nice form was submitted.");
-            }
-        );
-    }
-});
