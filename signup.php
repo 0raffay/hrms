@@ -185,7 +185,7 @@
                 </div>
             </div>
         </div>
-        <div class="screen-2  opacity-1">
+        <div class="screen-2  ">
             <div class=" screen py-5 py-xl-5 py-xxl-4">
 
                 <!-- SCREEN 2 FORM -->
@@ -258,7 +258,7 @@
 
                 <!-- SCREEN 2 BACKGROUNDS -->
                 <!-- BLUE -->
-                <div class="switchingScreen switchingScreen1 screenBackgrounds blueScreen active">
+                <div class="switchingScreen switchingScreen1 screenBackgrounds blueScreen ">
                     <img src="assets/images/signup/blue-screen/bottom-left.png" class="prop prop-bottom-left" alt="">
                     <img src="assets/images/signup/blue-screen/form-side.png" class="prop form-side-prop" alt="">
                     <div class="position-relative w-100 h-100">
@@ -282,7 +282,7 @@
                     </div>
                 </div>
 
-                <div class="switchingScreen switchingScreen2 screenBackgrounds orangeScreen">
+                <div class="switchingScreen switchingScreen2 screenBackgrounds orangeScreen ">
                     <div class="position-relative w-100 h-100">
                         <!-- PROPS -->
                         <div class="container h-100 d-flex align-items-center">
@@ -293,7 +293,7 @@
                                             <img src="assets/images/signup/orange-screen/main.png" alt="">
                                         </div>
                                         <h4 class="fs-35 fw-700 mb-15 text-center">Try Resource Pad HRMS</h4>
-                                        <p class="fs-18 fw-500 text-center">HRMS systems can automate many of your HR tasks, saving you time and money. HRMS systems can help to reduce errors in your HR data, such as payroll and benefits enrollment.</p>
+                                        <p class="fs-18 fw-500 text-center px-md-4">HRMS systems can automate many of your HR tasks, saving you time and money. HRMS systems can help to reduce errors in your HR data, such as payroll and benefits enrollment.</p>
                                     </div>
                                 </div>
                             </div>
@@ -301,7 +301,7 @@
                     </div>
                 </div>
 
-                <div class="switchingScreen switchingScreen3 screenBackgrounds pinkScreen">
+                <div class="switchingScreen switchingScreen3 screenBackgrounds pinkScreen ">
                     <div class="position-relative w-100 h-100">
                         <!-- PROPS -->
                         <div class="container h-100 d-flex align-items-center">
@@ -309,10 +309,10 @@
                                 <div class="col-12 col-sm-12 col-md-6">
                                     <div class="screenText fc-white d-none d-lg-block pe-4">
                                         <div class="main-img mb-10">
-                                            <img src="assets/images/signup/orange-screen/main.png" alt="">
+                                            <img src="assets/images/signup/pink-screen/main.png" alt="">
                                         </div>
                                         <h4 class="fs-35 fw-700 mb-15 text-center">Try Resource Pad HRMS</h4>
-                                        <p class="fs-18 fw-500 text-center">HRMS systems can automate many of your HR tasks, saving you time and money. HRMS systems can help to reduce errors in your HR data, such as payroll and benefits enrollment.</p>
+                                        <p class="fs-18 fw-500 text-center px-md-4">HRMS systems can automate many of your HR tasks, saving you time and money. HRMS systems can help to reduce errors in your HR data, such as payroll and benefits enrollment.</p>
                                     </div>
                                 </div>
                             </div>
@@ -320,18 +320,18 @@
                     </div>
                 </div>
 
-                <div class="switchingScreen switchingScreen4 screenBackgrounds greenScreen">
+                <div class="switchingScreen switchingScreen4 screenBackgrounds greenScreen ">
                     <div class="position-relative w-100 h-100">
                         <!-- PROPS -->
                         <div class="container h-100 d-flex align-items-center">
                             <div class="row">
                                 <div class="col-12 col-sm-12 col-md-6">
-                                <div class="screenText fc-white d-none d-lg-block pe-4">
+                                    <div class="screenText fc-white d-none d-lg-block pe-4">
                                         <div class="main-img mb-10">
                                             <img src="assets/images/signup/green-screen/main.png" alt="">
                                         </div>
                                         <h4 class="fs-35 fw-700 mb-15 text-center">Recommendation</h4>
-                                        <p class="fs-18 fw-500 text-center">HRMS systems can automate many of your HR tasks, saving you time and money. HRMS systems can help to reduce errors in your HR data, such as payroll and benefits enrollment.</p>
+                                        <p class="fs-18 fw-500 text-center px-md-4">HRMS systems can automate many of your HR tasks, saving you time and money. HRMS systems can help to reduce errors in your HR data, such as payroll and benefits enrollment.</p>
                                     </div>
                                 </div>
                             </div>
@@ -343,20 +343,17 @@
                     <div class="position-relative w-100 h-100">
                         <!-- PROPS -->
                         <div class="container h-100 d-flex align-items-center">
-                            <div class="row">
-                                <div class="col-12 col-sm-12 col-md-6">
-                                    <div class="screenText fc-white d-none d-lg-block">
-                                        <div class="main-img mb-10">
-                                            <img src="assets/images/signup/blue-screen/main-img.png" alt="">
-                                        </div>
-                                        <h4 class="fs-35 fw-700 mb-30 text-center">Used by 15,000 companies
-                                            from startups to enterprise</h4>
-                                        <div class="img__wrap text-center">
-                                            <img src="assets/images/signup/blue-screen/logos.png" alt="">
-                                        </div>
+
+                            <div class="col-12 col-sm-12 col-md-6">
+                            <div class="screenText fc-white d-none d-lg-block pe-4">
+                                    <div class="main-img mb-10 text-center">
+                                        <img src="assets/images/signup/purple-screen/main.png" alt="">
                                     </div>
+                                    <h4 class="fs-35 fw-700 mb-15 text-center">Secure Your Data</h4>
+                                    <p class="fs-18 fw-500 text-center px-md-4">HRMS systems can automate many of your HR tasks, saving you time and money. HRMS systems can help to reduce errors in your HR data, such as payroll and benefits enrollment.</p>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -367,7 +364,9 @@
     </main>
 
 
+    
     <!--==== FOOTER START ====-->
+    <?php include('includes/footer.php') ?>
     <?php include('includes/footer-scripts.php') ?>
     <!--==== FOOTER END ====-->
 

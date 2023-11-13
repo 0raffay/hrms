@@ -166,6 +166,11 @@
     body:has(.loader-screen.active) .mobileProps {
         display: block;
     }
+    .animateImg img {
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -191,10 +196,27 @@
         height: 22px;
         width: 22px;
     }
+
+    .custom-modal .modalMain {
+        max-width: 80%;
+        width: 100%;
+    }
+
+    .modalMain .img__wrap{
+        text-align: center;
+    }
+    .modalTextCard {
+        padding: 20px 10px;
+    }
+
+
 }
 
 @media only screen and (max-width: 584px) {
-
+    .custom-modal .modalMain {
+        max-width: 95%;
+        width: 100%;
+    }
     .introHeadingContainer {
         max-width: 370px;
         width: 100%;

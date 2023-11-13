@@ -239,7 +239,7 @@ label {
     --label-fs: var(--fs-16);
     --label-color: #475E6F;
     --label-fw: 600;
-    --label-mb:  0 0 10px;
+    --label-mb: 0 0 10px;
     --label-display: block;
     --label-line-height: normal
 }
@@ -590,6 +590,10 @@ label {
     color: #475E6F;
 }
 
+.fc-purple-700 {
+    color: #7113A0;
+}
+
 /* FONT COLORS END */
 
 /* FONT WEIGHTS START */
@@ -738,3 +742,82 @@ label {
     }
 }
 
+@keyframes fadeInSlideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-70px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.custom-modal {
+    display: none;
+}
+
+.custom-modal.active {
+    display: block;
+}
+
+.custom-modal.animateThis * {
+    animation-play-state: paused;
+}
+
+.custom-modal.active.animateThis * {
+    animation-play-state: running;
+}
+
+.custom-modal.animateThis .modalMain {
+    animation: fadeInSlideDown 1s ease;
+}
+
+.modalOverlay {
+    position: fixed;
+    inset: 0;
+    z-index: 24;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    display: block;
+}
+
+.custom-modal.center .modalOverlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rectangleModal .modalMain {
+    max-width: 770px;
+    width: 100%;
+
+    overflow: hidden;
+    border-radius: 20px;
+    border: 3px solid #7113A0;
+    background: linear-gradient(120deg, #F0D7FC 4.17%, #E1B0FA 65.05%);
+}
+
+.animateImg {
+    min-height: 390px;
+    position: relative;
+}
+
+.animateImg img {
+    position: absolute;
+    opacity: 0;
+    transition: all 500ms ease;
+}
+
+.animateImg img.active {
+    opacity: 1;
+}
+
+
+.modalTextCard {
+    display: grid;
+    place-content: center;
+    grid-template-columns: 313px;
+}

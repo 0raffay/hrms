@@ -33,8 +33,10 @@ $(document).ready(function () {
 
             screen1HideTimeline = fadeInOut(".screen-1", ".screen-2", 0.3);
             screen1HideTimeline.play();
-            let swtich = switchScreens();
-            swtich.play();
+            // let swtich = switchScreens();
+            // swtich.play();
+
+            switchClass();
         }
     );
     formInputHandler();
@@ -42,7 +44,6 @@ $(document).ready(function () {
     let backButton = $("[data-go-to-sc1]");
     backButton.click(function () {
         screen1HideTimeline.reverse();
-       
     });
 
     validateUserInfoForm(
@@ -53,7 +54,7 @@ $(document).ready(function () {
             disableClass: "disabled",
         },
         function () {
-            alert("nice");
+            showGreetingPopUpSequence();
         }
     );
 });
@@ -404,33 +405,61 @@ function validateUserInfoForm(options, action) {
     });
 }
 
-// function switchScreens() {
-//     let len = $('.switchingScreen').length;
-//     let screenElements = $(".switchingScreen");
+function switchClass() {
+    const screens = document.querySelectorAll(".switchingScreen");
+    const className = "active";
 
-//     for (let i = 0; i < len - 1; i++) {
-//         console.log("working");
+    let currentIndex = 0;
 
-//         setTimeout(function () {
-//             console.log("working in timeout");
-//             screenElements.eq(i).removeClass("active");
-//             screenElements.eq(i + 1).addClass("active");
-//         }, i * 700);  // Adjust the delay based on the iteration
-//     }
-// }
+    function updateClass() {
+        screens.forEach((screen, index) => {
+            if (index === currentIndex) {
+                screen.classList.add(className);
+            } else {
+                screen.classList.remove(className);
+                screen.classList.add("translateMore");
+            }
+        });
 
-function switchScreens() {
-    let screenElements = $(".switchingScreen");
-    let len = screenElements.length;
+        currentIndex = (currentIndex + 1) % screens.length;
 
-    let timeline = gsap.timeline();
-
-    for (let i = 0; i < len - 1; i++) {
-        timeline.to(screenElements[i], { x: "-100%", duration: 0.7, ease: "power2.inOut" }, i * 0.7);
-        timeline.set(screenElements[i], { display: "none" }, "+=0.7");
+        setTimeout(updateClass, 3000);
     }
 
-    timeline.fromTo(screenElements[len - 1], { x: "100%", display: "block" }, { x: "0%", duration: 0.7, ease: "power2.inOut" }, len * 0.7);
-
-    return timeline;
+    updateClass();
 }
+
+function showGreetingPopUpSequence () {
+    let greetingModal = $('#greetingModal');
+    let welcomeModal = $("#welcomeModal")
+    greetingModal.addClass("active");
+
+    $("[data-show-next-greeting]").click(function() {
+        greetingModal.removeClass("active");
+        welcomeModal.addClass("active");
+    })
+}
+
+function imgSwitch() {
+    const screens = document.querySelectorAll(".animateImg img");
+    const className = "active";
+
+    let currentIndex = 0;
+
+    function updateClass() {
+        screens.forEach((screen, index) => {
+            if (index === currentIndex) {
+                screen.classList.add(className);
+            } else {
+                screen.classList.remove(className);
+            }
+        });
+
+        currentIndex = (currentIndex + 1) % screens.length;
+
+        setTimeout(updateClass, 2000);
+    }
+
+    updateClass();
+}
+imgSwitch();
