@@ -45,8 +45,8 @@
     font-weight: 500;
 }
 
-.bookingModal .cus-inputs input.error.hasText + .floating-label,
-.bookingModal .cus-inputs input.error + .floating-label {
+.bookingModal .cus-inputs input.error.hasText+.floating-label,
+.bookingModal .cus-inputs input.error+.floating-label {
     color: crimson;
 }
 
@@ -61,6 +61,7 @@
 .monthItem {
     text-align: center;
 }
+
 .monthContainer {
     max-width: 100px;
     width: 100%;
@@ -82,4 +83,39 @@
 
 .monthArr button {
     font-size: 14px;
+}
+
+.dateItemCard {
+    padding: 15px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 45px;
+    border-radius: 30px;
+   
+    text-align: center;
+    margin: 0 auto;
+    min-height: 100px;
+
+    transition: all 100ms ease;
+}
+
+.slick-center .dateItemCard {
+    background: #7113A0;
+}
+.slick-center .dateItemCard *{
+    color: #FFF;
+
+}
+
+.dateItemCard .date {
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.dateItemCard .day {
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 500;
 }

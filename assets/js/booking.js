@@ -224,9 +224,29 @@ function getDaysWithDate(year, month) {
     return days;
 }
 
-// Example usage:
-const year = 2023;
-const month = 10; // 10 represents November
-const daysWithDate = getDaysWithDate(year, month);
+$(".monthSlider").on("afterChange", function (event, slick, currentSlide) {
+    let year = new Date().getFullYear();
+    let month = currentSlide;
+    let dateItems = getDaysWithDate(year, month);
 
-console.log(daysWithDate);
+    if ($(".dateSlider").hasClass("slick-initialized")) {
+        $(".dateSlider").slick("unslick");
+    }
+    $(".dateSlider").html("");
+
+    dateItems.forEach((date) => {
+        let card = `
+        <div class="item">
+       <div class="dateItemCard">
+           <div class="day">${date.day}</div>
+           <div class="date">${date.date}</div>
+       </div>
+   </div>`;
+        document.querySelector(".dateSlider").innerHTML += card;
+    });
+    $(".dateSlider").slick({
+        slidesToShow: 7,
+        centerMode: true,
+        speed: 500,
+    });
+});

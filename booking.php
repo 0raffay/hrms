@@ -199,6 +199,12 @@ $internetIcon = '<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xml
                     <div class="monthItem fs-16 fw-700 fc-secondary-700" month-id="12">December</div>
                   </div>
                 </div>
+
+                <div class="dateContainer">
+                  <div class="dateSlider">
+                  
+                  </div>
+                </div>
               </div>
 
               <h6 class="fs-15 fw-600 fc-secondary-700 text-center mb-20">
