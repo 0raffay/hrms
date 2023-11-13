@@ -6,3 +6,80 @@
     background-size: 100% 100%;
     position: relative;
 }
+
+.bookingModal .modalMain {
+    max-width: 100%;
+    width: 100%;
+}
+
+.bookingModal .formMain {
+    max-width: 700px;
+    width: 100%;
+
+    padding: 70px 60px;
+}
+
+.bookingModal .cus-inputs input {
+    border-radius: 10px;
+    border: 1px solid #D9D9D9;
+    background: #FFF;
+    min-height: 70px;
+
+}
+
+.bookingModal .cus-inputs input.hasText+label.floating-label {
+    top: 19px;
+    color: var(--clr-blue-600);
+    font-size: 12px;
+}
+
+.bookingModal .cus-inputs .floating-label {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.bookingModal .cus-inputs input,
+.bookingModal .cus-inputs .floating-label {
+    color: #475E6F;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.bookingModal .cus-inputs input.error.hasText + .floating-label,
+.bookingModal .cus-inputs input.error + .floating-label {
+    color: crimson;
+}
+
+.bookingFormSecondPart {
+    display: none;
+}
+
+#step2 textarea:focus {
+    outline: 1px solid var(--clr-blue-600);
+}
+
+.monthItem {
+    text-align: center;
+}
+.monthContainer {
+    max-width: 100px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.monthArr {
+    position: absolute;
+    width: 120%;
+    top: 50%;
+    left: -10%;
+    right: 10%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+.monthArr button {
+    font-size: 14px;
+}

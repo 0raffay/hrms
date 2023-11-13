@@ -96,17 +96,6 @@
     width: 100%;
 }
 
-.formMain {
-    margin-inline: auto;
-    padding-block: 33px;
-    padding-inline: 40px;
-    max-width: 454px;
-    width: 100%;
-    border-radius: 10px;
-    border: 1px solid #DDDDDF;
-    background: #FFF;
-    box-shadow: 0px 4px 4px 0px rgba(171, 162, 162, 0.25);
-}
 
 /* inputs */
 .inputFocusLine {
@@ -120,7 +109,7 @@
     right: 0;
     z-index: 3;
 }
-
+/* 
 .cus-inputs {
     position: relative;
     overflow: hidden;
@@ -147,7 +136,7 @@
 .cus-inputs .floating-label {
     position: absolute;
     top: 18px;
-}
+} */
 
 .showPassButton {
     right: var(--x-controller);
@@ -183,17 +172,17 @@
 .showPassButton i {
     color: var(--clr-purple-700);
 }
-
+/* 
 .cus-inputs .floating-label {
     z-index: 2;
     color: var(--clr-neutral-400);
     left: var(--x-controller);
 
     transition: all 100ms ease;
-}
+} */
 
 /* hover */
-input.hasText {
+/* input.hasText {
     padding-top: 7px;
 }
 
@@ -205,17 +194,17 @@ input.hasText+label.floating-label {
 
 input.hasText~.inputFocusLine {
     background: var(--clr-purple-700);
-}
+} */
 
 
 /* ERROR */
-input.error+label.floating-label {
+/* input.error+label.floating-label {
     color: crimson;
 }
 
 input.error~.inputFocusLine {
     background: crimson;
-}
+} */
 
 /* password animaiton */
 .passwordAnimation {
