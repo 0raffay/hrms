@@ -5,8 +5,13 @@
     background: url(../images/booking/main-bg.png) no-repeat;
     background-size: 100% 100%;
     position: relative;
+   
 }
-
+.bookimgMain .modalOverlay {
+    padding: 70px 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
 .bookingModal .modalMain {
     max-width: 100%;
     width: 100%;
@@ -92,18 +97,20 @@
     justify-content: space-between;
     max-width: 45px;
     border-radius: 30px;
-   
+
     text-align: center;
-    margin: 0 auto;
+    margin: 0 9px;
     min-height: 100px;
 
     transition: all 100ms ease;
+    cursor: pointer;
 }
-
+.dateItemCard:hover,
 .slick-center .dateItemCard {
     background: #7113A0;
 }
-.slick-center .dateItemCard *{
+.dateItemCard:hover *,
+.slick-center .dateItemCard * {
     color: #FFF;
 
 }
@@ -119,3 +126,43 @@
     font-size: 14px;
     font-weight: 500;
 }
+
+.dateContainer {
+    margin-bottom: 40px;
+}
+
+.timeContainer button {
+    color: #7E8F90;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 10px 20px;
+    font-weight: 600;
+    margin-bottom: 7px;
+    border-radius: 6px;
+    background: #FFF;
+    border: 1px solid #D9D9D9;
+}
+
+.timeContainer button.active {
+    color: #7113A0;
+    border: 1px solid #7113A0;
+}
+
+.rectangleModal.bookingModal .modalMain {
+    max-width: 770px;
+    min-height: 399px;
+    width: 100%;
+    border-radius: 20px;
+    border: 3px solid #7113A0;
+    background: linear-gradient(120deg, #F0D7FC 4.17%, #E1B0FA 65.05%);
+    align-items: stretch;
+    display: flex;
+
+}
+
+.bookingInfoCard {
+    border-radius: 10px;
+border: 1px solid #D9D9D9;
+padding: 20px 16px;
+}
+

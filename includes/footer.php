@@ -34,7 +34,7 @@
                     <div class="modalTextCard bg-white  h-100  text-center">
                         <h6 class="fs-24 fc-purple-700 mb-15  fw-700">Welcome to ResourcePad</h6>
                         <p class="fs-12 fc-black fw-400 mb-30">If you're looking for a way to lower the burden on your HR team and make HR management easier, Resource Pad is the solution for you.</p>
-                        <a href="dashboard.php" class="btn fc-white bg-pink-700 m-auto d-flex gap-10"><i class="ri-arrow-left-line"></i>Back to Home</a>
+                        <a href="booking.php" class="btn fc-white bg-pink-700 m-auto d-flex gap-10"><i class="ri-arrow-left-line"></i>Back to Home</a>
                     </div>
                 </div>
             </div>

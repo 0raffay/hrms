@@ -761,7 +761,7 @@ label {
 
 .cus-inputs.withIcon i {
     position: absolute;
-    left: 20px;
+    left: 14px;
     top: 50%;
     transform: translateY(-50%);
     z-index: 3;

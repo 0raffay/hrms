@@ -49,6 +49,7 @@ $internetIcon = '<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xml
   <!--==== HEADER START ====-->
   <?php include('includes/header-styles.php') ?>
   <link rel="stylesheet" href="assets/css/booking.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
   <!--==== HEADER END ====-->
 
   <title>Book a demo | <?php echo $siteName; ?></title>
@@ -61,7 +62,7 @@ $internetIcon = '<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xml
 
   <main class="bookingMain">
 
-    <div class="custom-modal center  bookingModal" id="step1">
+    <div class="custom-modal center  bookingModal active" id="step1">
       <div class="modalOverlay">
         <div class="modalMain">
           <div class="formMain">
@@ -81,9 +82,9 @@ $internetIcon = '<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xml
                 <input type="text" id="name" class="checkBeforeShow" data-validate-booking>
                 <label for="name" class="floating-label fs-16 fw-400 ">Full Name</label>
               </div>
-              <div class="row mb-20">
+              <div class="row ">
                 <div class="col-md-6 col-12">
-                  <div class="cus-inputs withIcon mb-15">
+                  <div class="cus-inputs withIcon mb-30">
                     <i>
                       <?php echo $emailIcon; ?>
                     </i>
@@ -92,7 +93,7 @@ $internetIcon = '<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xml
                   </div>
                 </div>
                 <div class="col-md-6 col-12">
-                  <div class="cus-inputs withIcon mb-15">
+                  <div class="cus-inputs withIcon mb-30 ">
                     <i>
                       <?php echo $groupIcons; ?>
                     </i>
@@ -149,7 +150,7 @@ $internetIcon = '<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xml
               <textarea class="mb-30 border bg-white rounded-2 w-100 d-block fs-20 fw-500 py-3 px-3 pe-4 outline-none" placeholder="Tell us about your project criteria, timeline, and overall expertise needed. Don’t worry, nothing here will be public or posted." id="anythingElse" cols="30" rows="10"></textarea>
 
               <div class="row">
-                <div class="col-md-6 col-12">
+                <div class="col-md-6 col-12 mb-2">
                   <button class="btn btn-lg bor-clr-pink fs-15 fw-600 py-3" data-booking-step-2-skip>Skip</button>
                 </div>
                 <div class="col-md-6 col-12">
@@ -161,7 +162,7 @@ $internetIcon = '<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xml
         </div>
       </div>
     </div>
-    <div class="custom-modal center bookingModal active" id="step3">
+    <div class="custom-modal center bookingModal" id="step3">
       <div class="modalOverlay">
         <div class="modalMain">
           <div class="formMain">
@@ -185,24 +186,13 @@ $internetIcon = '<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xml
                     <button type="button" role="button" class="prev"><i class="ri-arrow-right-s-line"></i></button>
                   </div>
                   <div class="monthSlider">
-                    <div class="monthItem fs-16 fw-700 fc-secondary-700" month-id="1">January</div>
-                    <div class="monthItem fs-16 fw-700 fc-secondary-700" month-id="2">febuary</div>
-                    <div class="monthItem fs-16 fw-700 fc-secondary-700" month-id="3">March</div>
-                    <div class="monthItem fs-16 fw-700 fc-secondary-700" month-id="4">April</div>
-                    <div class="monthItem fs-16 fw-700 fc-secondary-700" month-id="5">May</div>
-                    <div class="monthItem fs-16 fw-700 fc-secondary-700" month-id="6">June</div>
-                    <div class="monthItem fs-16 fw-700 fc-secondary-700" month-id="7">July</div>
-                    <div class="monthItem fs-16 fw-700 fc-secondary-700" month-id="8">August</div>
-                    <div class="monthItem fs-16 fw-700 fc-secondary-700" month-id="9">September</div>
-                    <div class="monthItem fs-16 fw-700 fc-secondary-700" month-id="10">October</div>
-                    <div class="monthItem fs-16 fw-700 fc-secondary-700" month-id="11">November</div>
-                    <div class="monthItem fs-16 fw-700 fc-secondary-700" month-id="12">December</div>
+                    <!-- appened by js booking.js -->
                   </div>
                 </div>
 
                 <div class="dateContainer">
                   <div class="dateSlider">
-                  
+                    <!-- appened by js booking.js -->
                   </div>
                 </div>
               </div>
@@ -211,13 +201,75 @@ $internetIcon = '<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xml
                 What time works for you?
               </h6>
 
-              <button class="btn btn-lg bg-pink-700 fs-15 fc-white fw-600 py-3">Done</button>
+              <div class="timeContainer row">
+                <div class="col-md-12 col-6 d-flex align-items-center justify-content-between mb-30 flex-wrap flex-column flex-md-row">
+                  <h6 class="fs-16 fw-700 fc-secondary-700 mb-2 mb-md-0">AM</h6>
+                  <button>10:00 AM</button>
+                  <button>10:00 AM</button>
+                  <button>10:00 AM</button>
+                  <button>10:00 AM</button>
+                </div>
+                <div class="col-md-12 col-6 d-flex align-items-center justify-content-between mb-30 flex-column flex-md-row">
+                  <h6 class="fs-16 fw-700 fc-secondary-700 mb-2 mb-md-0">PM</h6>
+                  <button>10:00 AM</button>
+                  <button>10:00 AM</button>
+                  <button>10:00 AM</button>
+                  <button>10:00 AM</button>
+                </div>
+              </div>
+
+              <button class="btn btn-lg bg-pink-700 fs-15 fc-white fw-600 py-3" data-confirm-booking>Done</button>
             </form>
           </div>
         </div>
       </div>
     </div>
+    <div class="custom-modal center rectangleModal bookingModal " id="step4">
+      <div class="modalOverlay">
+        <div class="modalMain">
+          <div class="row">
+            <div class="col-md-6 col-12 text-center py-md-0 py-5 d-flex flex-column justify-content-center">
+              <div class="img__wrap">
+                <img src="assets/images/booking/booking-modal.png" alt="booking">
+              </div>
+              <div class="text-content-right px-lg-5">
+                <h6 class="fs-24 fw-700 fc-purple-700 mb-10">Thanks for booking!</h6>
+                <p class="fs-14 fw-400 fc-secondary-700 mb-0">We have emailed you your meeting invite. We can’t wait to meet you! </p>
+              </div>
 
+            </div>
+            <div class="col-md-6 col-12">
+              <div class="modalTextCard bg-white  h-100  ">
+
+                <div class="bookingInfoCard mb-30">
+                  <h6 class="fs-15 fw-600 fc-secondary-700  mb-3">
+                    Let's talk about your HRMS needs.
+                  </h6>
+                  <div class="_name fs-14 fc-subbed-400  mb-2">
+                    <i class="ri-user-line"></i>
+                    Daniel
+                  </div>
+                  <div class="_date fs-14 fc-subbed-400  mb-2">
+                    <i class="ri-user-line"></i>
+                    6:15-6:45, mecerdi, 06 november 2023
+                  </div>
+                  <div class="_location fs-14 fc-subbed-400  mb-2">
+                    <i class="ri-global-line"></i>
+                    Karachi, Pakistan
+                  </div>
+                  <div class="_method fs-14 fc-subbed-400  mb-2">
+                    <i class="ri-vidicon-line"></i>
+                    Video Call
+                  </div>
+                </div>
+
+                <a href="dashboard.php" class="btn fc-white bg-pink-700 m-auto d-flex gap-10"><i class="ri-arrow-left-line"></i>Back to Home</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
   </main>
 

@@ -1,6 +1,7 @@
 $(document).ready(function () {
     formInputHandler();
 
+
     let iniHit = 0;
     validateBookingForm(
         {
@@ -23,12 +24,6 @@ $(document).ready(function () {
     );
 
     popUpSwitching();
-
-    $(".monthSlider").slick({
-        arrows: true,
-        nextArrow: $(".monthArr .next"),
-        prevArrow: $(".monthArr .prev"),
-    });
 });
 
 function formInputHandler() {
@@ -202,51 +197,173 @@ function popUpSwitching() {
             return;
         }
         $("#step2").fadeOut();
+        calenderSliderHandler();
         $("#step3").fadeIn();
     });
-}
-function getDaysWithDate(year, month) {
-    const daysInMonth = new Date(year, month + 1, 0).getDate();
-    const days = [];
 
-    for (let date = 1; date <= daysInMonth; date++) {
-        const currentDate = new Date(year, month, date);
-        const dayOfWeek = currentDate.toLocaleDateString("en-US", {
-            weekday: "short",
-        });
 
-        days.push({
-            day: dayOfWeek.toLowerCase(),
-            date: date.toString().padStart(2, "0"),
-        });
-    }
-
-    return days;
+    let confirmBookingButton = $("[data-confirm-booking]");
+    confirmBookingButton.click(function(e) {
+        e.preventDefault();
+        if($(".timeContainer button").hasClass("active")) {
+            $("#step3").fadeOut();
+            $("#step4").fadeIn();
+        }
+    })
 }
 
-$(".monthSlider").on("afterChange", function (event, slick, currentSlide) {
-    let year = new Date().getFullYear();
-    let month = currentSlide;
-    let dateItems = getDaysWithDate(year, month);
+function calenderSliderHandler() {
+    function getFutureMonths() {
+        let date = new Date();
+        let currentMonth = date.getMonth() + 1;
 
-    if ($(".dateSlider").hasClass("slick-initialized")) {
-        $(".dateSlider").slick("unslick");
+        const futureMonthsInt = [];
+        const futureMonthsName = [];
+
+        for (let month = currentMonth; month <= 12; month++) {
+            futureMonthsInt.push(month);
+        }
+
+        const monthNames = [
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December",
+        ];
+
+        futureMonthsInt.forEach((month) => {
+            futureMonthsName.push(monthNames[month - 1]);
+        });
+
+        return {
+            getMonthsName: function () {
+                return futureMonthsName;
+            },
+            getMonthsNameInt: function () {
+                return futureMonthsInt;
+            }
+        };
     }
-    $(".dateSlider").html("");
+    function getDaysWithDate(year, month) {
+        const daysInMonth = new Date(year, month + 1, 0).getDate();
+        const days = [];
 
-    dateItems.forEach((date) => {
-        let card = `
-        <div class="item">
-       <div class="dateItemCard">
-           <div class="day">${date.day}</div>
-           <div class="date">${date.date}</div>
-       </div>
-   </div>`;
-        document.querySelector(".dateSlider").innerHTML += card;
+        for (let date = 1; date <= daysInMonth; date++) {
+            const currentDate = new Date(year, month, date);
+            const dayOfWeek = currentDate.toLocaleDateString("en-US", {
+                weekday: "short",
+            });
+
+            days.push({
+                day: dayOfWeek.toLowerCase(),
+                date: date.toString().padStart(2, "0"),
+            });
+        }
+
+        return days;
+    }
+
+    // GETTING FUTURE MONTHS FOR THE SLIDER
+    let futureMonths = getFutureMonths().getMonthsName();
+    let futureMonthsIndex = getFutureMonths().getMonthsNameInt()
+    monthSliderHtml = "";
+    futureMonths.forEach((month, index) => {
+        let card = `  <div class="monthItem fs-16 fw-700 fc-secondary-700" month-id="${futureMonthsIndex[index]}">${month}</div>`;
+        monthSliderHtml += card;
     });
-    $(".dateSlider").slick({
-        slidesToShow: 7,
-        centerMode: true,
-        speed: 500,
+    $(".monthSlider").html(monthSliderHtml);
+
+    $(".monthSlider").slick({
+        arrows: true,
+        nextArrow: $(".monthArr .next"),
+        prevArrow: $(".monthArr .prev"),
     });
-});
+
+    function handleSelectDateSlider(currentMonth) {
+        let year = new Date().getFullYear();
+        let month = currentMonth || new Date().getMonth();
+        let dateItems = getDaysWithDate(year, month);
+        let todayDate = new Date().getDate();
+
+        if ($(".dateSlider").hasClass("slick-initialized")) {
+            $(".dateSlider").slick("unslick");
+        }
+        $(".dateSlider").html("");
+
+        dateItems.forEach((date) => {
+            let card = `
+            <div class="item">
+           <div class="dateItemCard">
+               <div class="day">${date.day}</div>
+               <div class="date">${date.date}</div>
+           </div>
+       </div>`;
+            document.querySelector(".dateSlider").innerHTML += card;
+        });
+
+        $(".dateSlider").slick({
+            // initialSlide: todayDate - 1,
+            // cssEase: "linear",
+            // slidesToShow: 7,
+            // centerMode: true,
+            // speed: 500,
+            initialSlide: todayDate - 1,
+            cssEase: "ease", 
+            slidesToShow: 7,
+            centerMode: true,
+            speed: 800, 
+            infinite: true,
+            focusOnSelect: true, responsive: [
+                {
+                  breakpoint: 767,
+                  settings: {
+                    slidesToShow: 5,
+                    slidesToScroll: 1,
+                  }
+                },
+                {
+                  breakpoint: 580,
+                  settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                  }
+                },
+                {
+                  breakpoint: 480,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                  }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+              ]
+        });
+
+
+
+    }
+    handleSelectDateSlider();
+
+    $(".monthSlider").on("afterChange", function (event, slick, currentSlide) {
+        let slides = slick;
+        let currentMonth = slides.$slides[slides.currentSlide].attributes[1].value;
+        handleSelectDateSlider(currentMonth);
+    });
+}
+
+$(".timeContainer button").click(function (e) {
+    e.preventDefault();
+    $(".timeContainer button").removeClass("active");
+    $(this).addClass("active")
+})
+

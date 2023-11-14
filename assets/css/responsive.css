@@ -166,9 +166,20 @@
     body:has(.loader-screen.active) .mobileProps {
         display: block;
     }
+
     .animateImg img {
         left: 0;
         right: 0;
+        margin: 0 auto;
+    }
+
+
+    .rectangleModal.bookingModal .modalMain,
+    .custom-modal .modalMain {
+        max-width: 90%;
+        width: 100%;
+    }
+    .dateItemCard {
         margin: 0 auto;
     }
 }
@@ -197,26 +208,39 @@
         width: 22px;
     }
 
+    .rectangleModal.bookingModal .modalMain,
     .custom-modal .modalMain {
         max-width: 80%;
         width: 100%;
     }
 
-    .modalMain .img__wrap{
+    .modalMain .img__wrap {
         text-align: center;
     }
+
     .modalTextCard {
         padding: 20px 10px;
     }
-
-
+    .modalTextCard:has(.bookingInfoCard) {
+        display: block;
+    }
+    .timeContainer button {
+        width: 100%;
+    }
 }
 
 @media only screen and (max-width: 584px) {
+    .formHeader  h5 {
+        font-size: 24px;
+        line-height: 1.5g;
+    }
+
+    .rectangleModal.bookingModal .modalMain,
     .custom-modal .modalMain {
         max-width: 95%;
         width: 100%;
     }
+
     .introHeadingContainer {
         max-width: 370px;
         width: 100%;
@@ -238,6 +262,9 @@
         width: 20px;
     }
 
+    .bookingModal .formMain {
+        padding: 28px 22px;
+    }
     .formMain {
         padding-inline: 22px;
         padding-block: 28px;
