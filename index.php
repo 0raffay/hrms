@@ -34,8 +34,8 @@
                 </div>
                 <div class="introHeadingContainer text-center">
                     <h1 class="introHeading fc-white">
-                        <span class="heading-1 setHeadingTranslate">Welcome to</span>
-                        <span class="heading-2 setHeadingTranslate">Our HRMS</span>
+                        <span class="heading-1 setHeadingTranslate">Revolutionize Your Workplace with</span>
+                        <span class="heading-2 setHeadingTranslate"> ResourcePad HRM</span>
                         <span class="dot"></span>
                     </h1>
                     <p class="introSubHeading setHeadingTranslate fs-24 fw-500 fc-white">Your Gateway to Human Resources Management</p>

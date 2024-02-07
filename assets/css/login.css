@@ -11,19 +11,21 @@
 
 
 .introHeadingContainer {
-    max-width: 761px;
+    /* max-width: 761px; */
+    max-width: 900px;
     width: 100%;
     margin-inline: auto;
 }
 
 .introHeading {
-    font-size: 120px;
+    /* font-size: 120px; */
+    font-size: 88px;
     line-height: 1.1;
     font-weight: 900;
     position: relative;
 }
 
-.dot {
+/* .dot {
     width: 32px;
     height: 32px;
     background: #7113A0;
@@ -32,6 +34,16 @@
     position: absolute;
     right: 15px;
     bottom: 40px;
+} */
+.dot {
+    width: 32px;
+    height: 32px;
+    background: #7113A0;
+    border-radius: 100%;
+    display: block;
+    position: absolute;
+    right: -5px;
+    bottom: 18px;
 }
 
 .scrollButtonWrapper {
@@ -109,6 +121,7 @@
     right: 0;
     z-index: 3;
 }
+
 /* 
 .cus-inputs {
     position: relative;
@@ -172,6 +185,7 @@
 .showPassButton i {
     color: var(--clr-purple-700);
 }
+
 /* 
 .cus-inputs .floating-label {
     z-index: 2;
